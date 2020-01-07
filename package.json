@@ -1,0 +1,9 @@
+{
+  "name": "banma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "weui-miniprogram": "^0.2.1"
+  }
+}
