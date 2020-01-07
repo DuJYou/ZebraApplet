@@ -1,2 +1,21 @@
 <!--pages/destination/destination.wxml-->
-<text>pages/destination/destination.wxml</text>
+<view class="section">
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item bc_green">
+      <van-sidebar class="flex-item demo-text-1" active-key="{{ activeKey }}" bind:change="onChange">
+        <van-sidebar-item title="日本" />
+        <van-sidebar-item title="欧洲" />
+        <van-sidebar-item title="泰国" />
+      </van-sidebar>
+    </view>
+    <view class="flex-item bc_red">
+      <view class="destination">1</view>
+      <view class="destination">1</view>
+      <view class="destination">1</view>
+      <view class="destination">1</view>
+      <view class="destination">1</view>
+      <view class="destination">1</view>
+    </view>
+
+  </view>
+</view>

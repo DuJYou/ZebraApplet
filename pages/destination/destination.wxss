@@ -1,1 +1,8 @@
 /* pages/destination/destination.wxss */
+.page-section{
+  margin-bottom: 20rpx;
+}
+.flex-wrp {display: flex;}
+.bc_green {width:24%; height: 100%;}
+.bc_red {background: red;width:76%; height: 100%;}
+.destination{background: bisque;width: 48%;height: 75px;margin:5px;}

@@ -1,13 +1,18 @@
 // pages/destination/destination.js
 Page({
-
+  
   /**
    * 页面的初始数据
    */
   data: {
-
+    activeKey: 0
   },
-
+  onChange(event) {
+    wx.showToast({
+      icon: 'none',
+      title: `切换至第${event.detail}项`
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
