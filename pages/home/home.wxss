@@ -1,0 +1,28 @@
+/* pages/home/home.wxss */
+.cms-home-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background: #fff;
+}
+.bm-searchbar {
+  height: 44px;
+  padding: 0 18px;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.bm-searchbar-title {
+  font-family: PingFangSC-Medium;
+  font-size: 15px;
+  color: #333;
+  letter-spacing: .8px;
+  font-weight: 500;
+}
