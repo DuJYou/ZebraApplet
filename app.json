@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/home/home",
+    "pages/personal/personal",
     "pages/destination/destination",
+    "pages/home/home",
     "pages/product/product",
-    "pages/bmfind/bmfind",
-    "pages/personal/personal"
+    "pages/bmfind/bmfind"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

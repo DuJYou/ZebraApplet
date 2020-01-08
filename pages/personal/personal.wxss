@@ -1,1 +1,61 @@
 /* pages/personal/personal.wxss */
+.bm-personal .bm-personal-top {
+    background: #fff;
+    overflow: hidden;
+    margin-bottom: 9px;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.bm-personal-info {
+    margin: 18Px 18Px 0;
+    width: 340px;
+    height: 194px;
+    background-image: url(https://product-ssl-qiniu.bmtrip.com/20191216-center-bg.png);
+    background-size: 100% 100%;
+    border-radius: 9px 9px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bm-personal-info-unsign {
+    color: #fff;
+    padding-top: 20px;
+}
+
+.bm-personal-info-unsign-text {
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    margin-bottom: 3px;
+    display: block;
+    text-align: center;
+
+}
+
+.bm-personal-info-unsign-info {
+    font-family: PingFangSC-Regular;
+    font-size: 10px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    margin-bottom: 12px;
+    display: block;
+    text-align: center;
+
+}
+
+.bt {
+    width: 165px;
+    height: 40px;
+    background-color: transparent;
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.7)), to(#FFFFFF));
+    background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
+    border-radius: 3px;
+    border: none;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #323233;
+}

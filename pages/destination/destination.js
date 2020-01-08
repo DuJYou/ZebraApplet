@@ -1,16 +1,64 @@
 // pages/destination/destination.js
 Page({
-  
+
   /**
    * 页面的初始数据
    */
   data: {
-    activeKey: 0
+    items: [{
+        // 导航名称
+        text: '中国',
+        // 禁用选项
+        disabled: false,
+        // 该导航下所有的可选项
+      },
+      {
+        text: '日本',
+        // 禁用选项
+        disabled: false,
+        // 该导航下所有的可选项
+      },
+      {
+        text: '所有城市',
+        // 禁用选项
+        disabled: false,
+        // 该导航下所有的可选项
+      }
+    ],
+    //左侧导航
+    activeKey: 0,
+    //折叠栏
+    activeNames: ['1'],
+    mainActiveIndex: 0,
+    activeId: 1
   },
+  onClickNav({
+    detail = {}
+  }) {
+    this.setData({
+      mainActiveIndex: detail.index || 0
+    });
+  },
+  onClickMore(){
+    
+  },
+  onClickItem({
+    detail = {}
+  }) {
+    const activeId = this.data.activeId === detail.id ? null : detail.id;
+
+    this.setData({
+      activeId
+    });
+  },
+
   onChange(event) {
     wx.showToast({
-      icon: 'none',
-      title: `切换至第${event.detail}项`
+      // icon: 'none',
+      // title: `切换至第${event.detail}项`
+    });
+    this.setData({
+      activeNames: event.detail,
     });
   },
   /**

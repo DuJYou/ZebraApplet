@@ -1,21 +1,45 @@
-<!--pages/destination/destination.wxml-->
-<view class="section">
-  <view class="flex-wrp" style="flex-direction:row;">
-    <view class="flex-item bc_green">
-      <van-sidebar class="flex-item demo-text-1" active-key="{{ activeKey }}" bind:change="onChange">
-        <van-sidebar-item title="日本" />
-        <van-sidebar-item title="欧洲" />
-        <van-sidebar-item title="泰国" />
-      </van-sidebar>
+<!-- pages/destination/destination.wxml -->
+<view class="box">
+<van-tree-select
+  items="{{ items }}"
+  main-active-index="{{ mainActiveIndex }}"
+  active-id="{{ activeId }}"
+  bind:click-nav="onClickNav"
+  bind:click-item="onClickItem"
+>
+  <view slot="content">
+    <view class="destinationList">
+      <view class="destination">
+      <cover-image class="destinationImg" src="https://product-ssl-qiniu.bmtrip.com/product_5d77689f2734e.jpg?imageView2/1/format/jpg/interlace/1/q/80"/>
+      <view class="shade"></view>
+      <view class="info-text">
+        <view class="textBox">
+          <text style="font-size:9px">Honshu</text>
+          <text style="font-size:16px">本州</text>
+        </view>
+      </view>
+      </view>
+      <view class="destination">1</view>
+      <view class="destination">1</view>
+      <view class="destination">1</view>
     </view>
-    <view class="flex-item bc_red">
-      <view class="destination">1</view>
-      <view class="destination">1</view>
-      <view class="destination">1</view>
-      <view class="destination">1</view>
-      <view class="destination">1</view>
-      <view class="destination">1</view>
+    <view class="more" bind:click="onClickMore">
+    更多的目的地 
+    <cover-image class="moreImg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSIxMnB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGNpcmNsZSBmaWxsPSIjQzA0Mzc0IiBjeD0iNiIgY3k9IjYiIHI9IjYiLz48cGF0aCBkPSJNNiA1LjM3OWwyLjQ3NSAyLjQ3NWEuNS41IDAgMCAwIC43MDctLjcwOEw2LjM1NCA0LjMxOGEuNDk4LjQ5OCAwIDAgMC0uNzA4IDBMMi44MTggNy4xNDZhLjUuNSAwIDAgMCAuNzA3LjcwOEw2IDUuMzc5eiIgZmlsbD0iI0ZGRiIvPjwvZz48L3N2Zz4=" bindload="" binderror="">
+    </cover-image>
     </view>
-
+  
+    <view>
+    <text class="tltleSite">推荐地点</text>
+      <view>
+      <cover-image class="recommendImg" src="https://product-ssl-qiniu.bmtrip.com/product_5dfc6022f3243.jpg"/>
+      <text class="recBrief">抖音无边泳池|三亚5天4晚私家游</text>
+      <view class="feature">
+        <text >网红酒店康年</text>
+      </view>
+      <text class="price"> 12,500起/人</text>
+      </view>
+    </view>
   </view>
+</van-tree-select>
 </view>

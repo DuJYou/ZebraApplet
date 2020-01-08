@@ -1,2 +1,28 @@
-<!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<!-- pages/personal/personal.wxml -->
+<view>
+    <view class="bm-personal-top">
+        <view class="bm-personal-info">
+            <view class="bm-personal-info-unsign">
+                <text class="bm-personal-info-unsign-text">Hi,  终于等到你！</text>
+                <text class="bm-personal-info-unsign-info">让每个家庭享受省心、精彩的旅行体验</text>
+                <button class="bt">登录/注册</button>
+            </view>
+            <view class="myList">
+                <view class="myCoupon">
+                    <text>---</text>
+                    <text>优惠卷</text>
+                </view>
+                <view class="myintegral">
+                    <text>---</text>
+                    <text>我的积分</text>
+                </view>
+                <view class="myCollect">
+                    <text>---</text>
+                    <text>我的收藏</text>
+                </view>
+            </view>
+        </view>
+        <view></view>
+    </view>
+    <view></view>
+</view>
