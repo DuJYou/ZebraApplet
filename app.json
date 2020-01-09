@@ -1,7 +1,10 @@
 {
   "pages": [
-    "pages/personal/personal",
     "pages/destination/destination",
+    "pages/personal/personal",
+    "pages/feedback/feedback",
+    "pages/settings/settings",
+    "pages/login/login",
     "pages/home/home",
     "pages/product/product",
     "pages/bmfind/bmfind"

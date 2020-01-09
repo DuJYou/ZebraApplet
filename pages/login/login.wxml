@@ -1,0 +1,18 @@
+<!-- pages/login/login.wxml -->
+<view class="box">
+    <view class="bg" hover-class="none" hover-stop-propagation="false">
+        <image class="bg" src="https://product-ssl-qiniu.bmtrip.com/20191125_banner.png"></image>
+    </view>
+    <view class="return">
+        <text class="x" selectable="false" space="false" decode="false" bindtap="onClickReturn">x</text>
+    </view>
+    <view class="main">
+        <text class="title">手机号登录</text>
+        <text class="hint">未注册手机验证后即完成注册</text>
+        <text class="phone">手机号</text>
+        <input class="input" type="text" placeholder="请输入手机号码" />
+        <button class="get">获取验证码</button>
+        <text class="otherLogin">账号密码登录</text>
+    </view>
+    <text class="bt">登录即代表同意 斑马旅游 用户协议</text>
+</view>

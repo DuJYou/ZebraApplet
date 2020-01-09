@@ -1,5 +1,6 @@
 /* pages/personal/personal.wxss */
-.bm-personal .bm-personal-top {
+.bm-personal-top {
+    display: block;
     background: #fff;
     overflow: hidden;
     margin-bottom: 9px;
@@ -17,6 +18,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
+    /* position: relative; */
 }
 
 .bm-personal-info-unsign {
@@ -58,4 +61,119 @@
     padding: 0 15px;
     font-size: 14px;
     color: #323233;
+}
+
+.myList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    color: #fff;
+}
+
+.myCoupon {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+}
+
+.myintegral {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+}
+
+.myCollect {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+}
+.bord{
+    border-right: 0.02rem solid floralwhite;
+}
+.bm-personal-main-insert{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.our{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0.48rem;
+    flex-direction: row;
+    justify-content: center;
+    color: #000;
+}
+.ourImg{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+.myOrder{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    justify-content: center;
+    text-align: center;
+}
+.myJourney{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    justify-content: center;
+    text-align: center;
+}
+.jfShop{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    justify-content: center;
+    text-align: center;
+}
+.ourText{
+    font-size: 11px;
+}
+.ourI{
+    margin-bottom: -18px;
+}
+
+.itemImg{
+    width: 18px;
+    height: 18px;
+    vertical-align: text-top;
+    margin-right: 10px;
+}
+.itemText{
+    font-size: 14px;
+    color: #1A1A1A;
+    line-height: 50px;
+}
+.list_item{
+    background: #fff;
+    border-radius: 0.05333rem;
+    padding: 0 18px;
+    margin-bottom: 9px;
+}
+.itemNext{
+    position: absolute;
+    right:5px;
+    line-height: 50px;
+}
+.item{
+    position: relative;
+    height: 50px;
+    border-bottom: 1Px solid #E2E2E2;
 }

@@ -1,5 +1,5 @@
 <!-- pages/personal/personal.wxml -->
-<view>
+<view style="background:#f5f5f5">
     <view class="bm-personal-top">
         <view class="bm-personal-info">
             <view class="bm-personal-info-unsign">
@@ -10,11 +10,11 @@
             <view class="myList">
                 <view class="myCoupon">
                     <text>---</text>
-                    <text>优惠卷</text>
+                    <text class="bord">优惠卷</text>
                 </view>
                 <view class="myintegral">
                     <text>---</text>
-                    <text>我的积分</text>
+                    <text class="bord">我的积分</text>
                 </view>
                 <view class="myCollect">
                     <text>---</text>
@@ -22,7 +22,50 @@
                 </view>
             </view>
         </view>
-        <view></view>
+        <view class="bm-personal-main-insert" hover-class="none" hover-stop-propagation="false">
+            <view class="our">
+                <view class="myOrder">
+                    <view class="ourI">
+                        <image class="ourImg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMnB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCB4MT0iNTAlIiB5MT0iMCUiIHgyPSI1MCUiIHkyPSIxMDAlIiBpZD0iYSI+PHN0b3Agc3RvcC1jb2xvcj0iIzYyNjI2MiIgb2Zmc2V0PSIwJSIvPjxzdG9wIHN0b3AtY29sb3I9IiMzMzMiIG9mZnNldD0iMTAwJSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGZpbGwtcnVsZT0ibm9uemVybyIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTIwIDExdjEwYTEgMSAwIDAxLTIgMFYxMGgxYTEgMSAwIDAxMSAxeiIgZmlsbD0iIzg5ODk4OSIvPjxwYXRoIGQ9Ik0yMCAyMlYyYTEgMSAwIDAwLTEtMUgzYTEgMSAwIDAwLTEgMXYyMGExIDEgMCAwMDEgMWgxOGExIDEgMCAwMS0xLTF6bS04LTZINmExIDEgMCAwMTAtMmg2YTEgMSAwIDAxMCAyem00LThINmExIDEgMCAxMTAtMmgxMGExIDEgMCAwMTAgMnoiIGZpbGw9InVybCgjYSkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yIC0xKSIvPjwvZz48L3N2Zz4="></image>
+                    </view>
+                    <text class="ourText" selectable="false" space="false" decode="false">
+                        我的订单
+                    </text>
+                </view>
+                <view class="myJourney">
+                    <view class="ourI">
+                        <image class="ourImg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjJweCIgaGVpZ2h0PSIyMHB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCB4MT0iNTAlIiB5MT0iMCUiIHgyPSI1MCUiIHkyPSIxMDAlIiBpZD0iYSI+PHN0b3Agc3RvcC1jb2xvcj0iIzYyNjI2MiIgb2Zmc2V0PSIwJSIvPjxzdG9wIHN0b3AtY29sb3I9IiMzMzMiIG9mZnNldD0iMTAwJSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGZpbGwtcnVsZT0ibm9uemVybyIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTE2IDZINmExIDEgMCAwMS0uNzgtLjM3QTEgMSAwIDAxNSA0LjhsLjgzLTRhMSAxIDAgMDExLS44aDguMzRhMSAxIDAgMDExIC44bC44MyA0YTEgMSAwIDAxLS4yLjgzQTEgMSAwIDAxMTYgNnpNNy4yMyA0aDcuNTRsLS40Mi0yaC02LjdsLS40MiAyeiIgZmlsbD0iIzg5ODk4OSIvPjxwYXRoIGQ9Ik0yMiA2SDJhMSAxIDAgMDAtMSAxdjE0YTEgMSAwIDAwMSAxaDIwYTEgMSAwIDAwMS0xVjdhMSAxIDAgMDAtMS0xek04IDE3YTEgMSAwIDAxLTIgMHYtNmExIDEgMCAwMTIgMHY2em0xMCAwYTEgMSAwIDAxLTIgMHYtNmExIDEgMCAwMTIgMHY2eiIgZmlsbD0idXJsKCNhKSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEgLTIpIi8+PC9nPjwvc3ZnPg=="></image>
+                    </view>
+                    <text class="ourText" selectable="false" space="false" decode="false">
+                        我的行程
+                    </text>
+                </view>
+                <view class="jfShop">
+                    <view class="ourI">
+                        <image class="ourImg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjJweCIgaGVpZ2h0PSIyMnB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCB4MT0iNDkuOTMwMjU1OCUiIHkxPSIwLjAwMDIxNDg0ODU4OSUiIHgyPSI0OS45MzAyNTU4JSIgeTI9IjEwMCUiIGlkPSJhIj48c3RvcCBzdG9wLWNvbG9yPSIjNjI2MjYyIiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzMzMyIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEgLTEpIiBmaWxsLXJ1bGU9Im5vbnplcm8iIGZpbGw9Im5vbmUiPjxjaXJjbGUgZmlsbD0iIzg5ODk4OSIgY3g9IjkiIGN5PSIyMSIgcj0iMiIvPjxjaXJjbGUgZmlsbD0iIzg5ODk4OSIgY3g9IjE3IiBjeT0iMjEiIHI9IjIiLz48cGF0aCBkPSJNMjEgMTMuMjRsMi04YTEgMSAwIDAwLS4xOC0uODZBMSAxIDAgMDAyMiA0SDYuMjhMNiAxLjg3QTEgMSAwIDAwNSAxSDJhMSAxIDAgMDAwIDJoMi4xMmwuMjkgMi4xMyAxLjA3IDggLjUzIDRBMSAxIDAgMDA3IDE4aDEzYTEgMSAwIDAwMC0ySDcuODhsLS4yNy0ySDIwYTEgMSAwIDAwMS0uNzZ6IiBmaWxsPSJ1cmwoI2EpIi8+PC9nPjwvc3ZnPg=="></image>
+                    </view>
+                    <text class="ourText" selectable="false" space="false" decode="false">
+                        积分商城
+                    </text>
+                </view>
+            </view>
+        </view>
     </view>
-    <view></view>
+    <view class="list_item">
+        <view class="item">
+            <image class="itemImg" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMjAgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjYgKDY3NDkxKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY25fdHJhdmVsZXJzPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IuaWkemprOaXhea4uOaUueeJiCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IuaIkeeahF/nmbvlvZXlkI4iIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNi4wMDAwMDAsIC0zMzkuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJtb2R1bGUwMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTguMDAwMDAwLCAxNjkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0i5bi455So5Ye66KGM5Lq6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOC4wMDAwMDAsIDE2OC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iaWNuX3RyYXZlbGVycyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cCIgb3BhY2l0eT0iMCIgZmlsbD0iI0ZGRkZGRiI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiPjwvcmVjdD4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlIiBzdHJva2U9IiMzMzMzMzMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHg9IjEiIHk9IjMiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNCIgcng9IjEiPjwvcmVjdD4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTExLDcgTDE3LDciIGlkPSJQYXRoIiBzdHJva2U9IiMzMzMzMzMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTEsOSBMMTUsOSIgaWQ9IlBhdGgiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY3g9IjYuNSIgY3k9IjguMjUiIHI9IjIiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMy41LDEzLjc1IEMzLjUsMTIuMDkzMTQ1OCA0Ljg0MzE0NTc1LDEwLjc1IDYuNSwxMC43NSBDOC4xNTY4NTQyNSwxMC43NSA5LjUsMTIuMDkzMTQ1OCA5LjUsMTMuNzUiIGlkPSJQYXRoIiBzdHJva2U9IiMzMzMzMzMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <text class="itemText" selectable="false" space="false" decode="false">常用出行人信息</text>
+            <text class="itemNext" selectable="false" space="false" decode="false">></text>
+        </view>
+        <view class="item" bindtap="onClickFeeback">
+            <image class="itemImg" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIxNXB4IiB2aWV3Qm94PSIwIDAgMjAgMTUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU5LjEgKDg2MTQ0KSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT5pY25fZXZhbHVhdGlvbjwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJNT0JfMy4wLeaIkeeahCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IuaIkeeahF/mnKrnmbvlvZUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xOC4wMDAwMDAsIC00MTguMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSLkuoznuqflhaXlj6MiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAzNTAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0i6IGU57O75a6i5pyNIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOC4wMDAwMDAsIDY2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJpY25fZXZhbHVhdGlvbiI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cCIgb3BhY2l0eT0iMCIgZmlsbD0iI0ZGRkZGRiI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiPjwvcmVjdD4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTgsMTUgTDEyLDE1IEwxMCwxNyBMOCwxNSBMMiwxNSBDMS40NDc3MTUyNSwxNSAxLDE0LjU1MjI4NDcgMSwxNCBMMSw0IEMxLDMuNDQ3NzE1MjUgMS40NDc3MTUyNSwzIDIsMyBMMTgsMyBDMTguNTUyMjg0NywzIDE5LDMuNDQ3NzE1MjUgMTksNCBMMTksMTQgQzE5LDE0LjU1MjI4NDcgMTguNTUyMjg0NywxNSAxOCwxNSBaIiBpZD0iUGF0aCIgc3Ryb2tlPSIjMzMzMzMzIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDxsaW5lIHgxPSI1IiB5MT0iNyIgeDI9IjE1IiB5Mj0iNyIgaWQ9IlBhdGgiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L2xpbmU+CiAgICAgICAgICAgICAgICAgICAgICAgIDxsaW5lIHgxPSI1IiB5MT0iMTEiIHgyPSIxNSIgeTI9IjExIiBpZD0iUGF0aCIgc3Ryb2tlPSIjMzMzMzMzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvbGluZT4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <text class="itemText" selectable="false" space="false" decode="false">用户反馈</text>
+            <text class="itemNext" selectable="false" space="false" decode="false">></text>
+        </view>
+        <view class="item" bindtap="onClickSet">
+            <image class="itemImg" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSIwIDAgMjAgMTgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU5LjEgKDg2MTQ0KSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT5pY25fc2V0dGluZzwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJNT0JfMy4wLeaIkeeahCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IuaIkeeahF/mnKrnmbvlvZUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xOC4wMDAwMDAsIC00NjguMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSLkuoznuqflhaXlj6MiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAzNTAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0i5Y67QXBwLVN0b3Jl6K+E5Lu3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOC4wMDAwMDAsIDExNy4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iaWNuX3NldHRpbmciPgogICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAiIG9wYWNpdHk9IjAiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBwb2ludHM9IjE0LjUgMi4yMSA1LjUgMi4yMSAxIDEwIDUuNSAxNy43OSAxNC41IDE3Ljc5IDE5IDEwIj48L3BvbHlnb24+CiAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIHN0cm9rZT0iIzMzMzMzMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjeD0iMTAiIGN5PSIxMCIgcj0iNCI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <text class="itemText" selectable="false" space="false" decode="false">设置</text>
+            <text class="itemNext" selectable="false" space="false" decode="false">></text>
+        </view>
+    </view>
 </view>

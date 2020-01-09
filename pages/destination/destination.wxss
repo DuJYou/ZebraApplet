@@ -79,10 +79,13 @@
   background: #fff;
   font-size: 12px;
 }
+.more::after {
+  border: none;
+}
 .moreImg{
   width: 12px;
   height: 12px;
-  padding: 5px;
+  padding: 8px;
 
 }
 .tltleSite {
@@ -92,7 +95,9 @@
   text-align: left;
   margin-bottom: 18Px;
 }
-
+.tltleSiteList{
+  padding-bottom:20px ;
+}
 .recommendImg {
   border-radius: 3px;
   height: 141px;

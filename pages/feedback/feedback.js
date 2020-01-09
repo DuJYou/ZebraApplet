@@ -1,4 +1,4 @@
-// pages/personal/personal.js
+// pages/feedback/feedback.js
 Page({
 
   /**
@@ -7,29 +7,10 @@ Page({
   data: {
 
   },
-  onClickSet(){
-    console.log(1);
-    
-    wx.navigateTo({
-      url: '/pages/settings/settings',
-      success: (result)=>{
-        
-      },
-      fail: ()=>{},
-      complete: ()=>{}
-    });
-  },
-  onClickFeeback(){
-    console.log(1);
-    
-    wx.navigateTo({
-      url: '/pages/feedback/feedback',
-      success: (result)=>{
-        
-      },
-      fail: ()=>{},
-      complete: ()=>{}
-    });
+  onClickReturn(){
+    wx.switchTab({
+      url: '/pages/personal/personal',
+    })
   },
   /**
    * 生命周期函数--监听页面加载
