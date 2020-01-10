@@ -1,10 +1,1162 @@
 <!--pages/home/home.wxml-->
-<view >
-  <view class="cms-home-header">
-    <view class="bm-searchbar">
-      <!-- <image src="/image/erji.png"></image> -->
-      <view class="bm-searchbar-title">首页</view>
-      <!-- <image src="/image/ss.png"></image> -->
-    </view>
-  </view>
+<view class="app">
+	<view class="cms-home-header">
+		<view class="bm-searchbar">
+			<view class="bm-searchbar-left"></view>
+			<view class="bm-searchbar-title">首页</view>
+			<view class="bm-searchbar-right"></view>
+		</view>
+		<view class="bm-navbar">
+			<van-tabs active="{{ active }}">
+				<van-tab title="首页">
+					<view class="cms-home">
+						<view class="cms-static">
+							<view class="bm-banner">
+								<view class='swiper-box'>
+									<swiper autoplay="true" interval="{{interval}}" duration="{{duration}}" circviewar="true" current="{{swiperCurrent}}" bindchange="swiperChange">
+										<block wx:for="{{imgUrls}}" wx:key="index">
+											<swiper-item>
+												<image src="{{item}}" class="slide-image" width="100%" />
+											</swiper-item>
+										</block>
+									</swiper>
+									<view class="dots">
+										<block wx:for="{{imgUrls}}" wx:key="unique">
+											<view class="dot {{index == swiperCurrent  ? 'active' : ''}}"></view>
+										</block>
+									</view>
+								</view>
+							</view>
+							<view class="bm-insert">
+								<view class="bm-insert-wrap">
+									<block wx:for="{{list}}" wx:key="list">
+										<view class="bm-insert-item">
+											<image class="bm-insert-item-img" src="{{item.img}}"></image>
+											<view class="bm-insert-item-title">{{item.label}}</view>
+										</view>
+									</block>
+								</view>
+							</view>
+							<view class="bm-theme">
+								<view class="bm-theme-wrap">
+									<block wx:for="{{theme}}" wx:key="theme">
+										<view class="theme-wrap" id="{{item.id}}">
+											<image src="{{item.img}}" class="bm-theme-item-img" width="100%" />
+											<view class="theme-title">{{item.label}}</view>
+										</view>
+									</block>
+								</view>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="bm-picture">
+								<image class="bm-img" src="https://product-ssl-qiniu.bmtrip.com/product_5e15acbb8d9e3.jpg"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="cms-home-coupon">
+								<image class="coupon-img" src="https://product-ssl-qiniu.bmtrip.com/product_5e15b374cb180.jpg"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index<=3 }}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="cms-home-coupon">
+								<image class="img2" src="https://product-ssl-qiniu.bmtrip.com/product_5def57a252094.jpg"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>3&&index<6}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="bm-picture">
+								<image class="bm-img" src="https://product-ssl-qiniu.bmtrip.com/product_5da96a0eec23b.png"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>=6&&index<10}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="bm-picture">
+								<image class="bm-img" src="https://product-ssl-qiniu.bmtrip.com/product_5da96a1e35d49.png"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>=10&&index<14}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="cms-home-coupon">
+								<image class="coupon-img2" src="https://product-ssl-qiniu.bmtrip.com/product_5da96a2ced430.png"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>=14&&index<18}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="cms-home-coupon">
+								<image class="coupon-img2" src="https://product-ssl-qiniu.bmtrip.com/product_5da96a4731ed0.png"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>=18&&index<23}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="bm-picture">
+								<image class="bm-img" src="https://product-ssl-qiniu.bmtrip.com/product_5da96a56eac5e.png"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>=23&&index<27}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+					</view>
+				</van-tab>
+				<van-tab title="欢淘亲子">
+					<view class="cms-home2">
+						<view class="home2-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dad3f7f2e83c.jpg" style="width: 100%;"></image>
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dad3fa3acbdd.jpg" style="height: 756rpx;width: 100%;"></image>
+						</view>
+						<view class="home2-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dad3fb372c75.jpg" style="height:280rpx;width:100%"></image>
+						</view>
+						<view class="home2-item bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{childdata}}" wx:key="childdata" wx:if="{{index>=0&&index<4}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+						<view class="home2-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dad50ee7af42.jpg" style="height:190rpx;width:100%"></image>
+						</view>
+						<view class="home2-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dad41a0efbe5.jpg" style="height:280rpx;width:100%"></image>
+						</view>
+						<view class="home2-item bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{childdata}}" wx:key="childdata" wx:if="{{index>=4&&index<8}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+						<view class="home2-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dad50ee7af42.jpg" style="height:190rpx;width:100%"></image>
+						</view>
+						<view class="home2-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dad431337984.jpg" style="height:280rpx;width:100%"></image>
+						</view>
+						<view class="home2-item bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{childdata}}" wx:key="childdata" wx:if="{{index>=8&&index<12}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+						<view class="home2-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dad50ee7af42.jpg" style="height:190rpx;width:100%"></image>
+						</view>
+						<view class="home2-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dad46413e977.jpg" style="height:280rpx;width:100%"></image>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='100rpx'>
+									<block wx:for="{{addUrls}}" wx:key="addUrls">
+										<swiper-item>
+											<view class='box' style="margin:0">
+												<image class="test-img" src='{{item}}' style="width:610rpx;height:500rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="bm-cms-form">
+								<view class="tab-pane-form">
+									<van-cell-group>
+										<van-field required clearable placeholder="您的姓名" />
+										<van-field placeholder="您的联系电话" required clearable />
+										<van-field value="{{ sms }}" center clearable placeholder="请输入短信验证码" border="{{ false }}" use-button-slot>
+											<van-button slot="button" size="small" color="#C14374">发送验证码</van-button>
+										</van-field>
+									</van-cell-group>
+									<van-button color="#C14374" size="large">免费获取方案</van-button>
+								</view>
+							</view>
+						</view>
+					</view>
+				</van-tab>
+				<van-tab title="超级旅行团">
+					<view class="cms-home3">
+						<view class="home3-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5da9558976c82.jpg" style="width:100%;height:540rpx;"></image>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='80rpx'>
+									<block wx:for="{{tripUrls}}" wx:key="tripUrls">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item}}' style="width:100%;height:600rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="bm-cms-item">
+							<view class="cms-home-coupon">
+								<image src="https://product-ssl-qiniu.bmtrip.com/product_5da955d994eae.jpg" style="withd:100%;height:252rpx"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index<3}}">
+										<swiper-item>
+											<view class='box'>
+												<image style="height:400rpx;width:100%" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home3-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5daa78525d2d2.jpg" style="height:120rpx;width:100%;margin-top:40rpx"></image>
+						</view>
+						<view class="bm-cms-item">
+							<view class="cms-home-coupon">
+								<image src="https://product-ssl-qiniu.bmtrip.com/product_5da95669cc8b1.jpg" style="withd:100%;height:252rpx"></image>
+							</view>
+						</view>
+						<view class="home2-item bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index>=3&&index<6}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+						<view class="home3-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5daa7859dcfe7.jpg" style="height:120rpx;width:100%;margin-top:40rpx"></image>
+						</view>
+						<view class="bm-cms-item">
+							<view class="cms-home-coupon">
+								<image src="https://product-ssl-qiniu.bmtrip.com/product_5da956bf5ebf8.jpg" style="withd:100%;height:252rpx"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index>=6&&index<8}}">
+										<swiper-item>
+											<view class='box'>
+												<image style="height:400rpx;width:100%" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home3-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5daa786289cc6.jpg" style="height:120rpx;width:100%;margin-top:40rpx"></image>
+						</view>
+						<view class="bm-cms-item">
+							<view class="cms-home-coupon">
+								<image src="https://product-ssl-qiniu.bmtrip.com/product_5da95775851d7.jpg" style="withd:100%;height:252rpx"></image>
+							</view>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index>=8&&index<11}}">
+										<swiper-item>
+											<view class='box'>
+												<image style="height:400rpx;width:100%" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home3-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5daa7867bf1fc.jpg" style="height:120rpx;width:100%;margin-top:40rpx"></image>
+						</view>
+						<view class="home3-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5da957d819fa8.jpg" style="height:206rpx;width:100%;"></image>
+						</view>
+						<view class="home3-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5da957e2bf1bd.jpg" style="height:800rpx;width:100%;"></image>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index>=11&&index<12}}">
+										<swiper-item>
+											<view class='box'>
+												<image style="height:400rpx;width:100%" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home3-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5da957fc6316d.jpg" style="height:800rpx;width:100%;"></image>
+						</view>
+						<view class="bm-cms-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index>=12}}">
+										<swiper-item>
+											<view class='box'>
+												<image style="height:400rpx;width:100%" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home3-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5da95819bc8c5.jpg" style="height:800rpx;width:100%;"></image>
+						</view>
+						<view class="home3-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5da958347673d.jpg" style="height:120rpx;width:100%;"></image>
+						</view>
+					</view>
+				</van-tab>
+				<van-tab title="和风东瀛">
+					<view class="cms-home4">
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf94038c130.jpg" style="width:100%;height:480rpx"></image>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf9462c3361.jpg" style="width:100%;height:204rpx"></image>
+						</view>
+						<view class="home4-item">
+							<view class="bm-product-two">
+								<block wx:for="{{ribenUrl}}" wx:key="ribenUrl" wx:if="{{index<6}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" style="width:340rpx;height:336rpx">
+										<image class="home4-img" src="{{item}}" />
+									</view>
+								</block>
+							</view>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddfae7eefac8.jpg" style="width:100%;height:70rpx"></image>
+						</view>
+						<view class="bm-cms-item cms" style="width:100%;height:300rpx">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='80rpx'>
+									<block wx:for="{{ribenUrl}}" wx:key="ribenUrl" wx:if="{{index>=6&&index<10}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item}}' style="width:100%;height:300rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home4-item" style="margin-top:20rpx">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddfb50545268.jpg" style="width:100%;height:70rpx"></image>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf9e3a1adf7.jpg" style="width:100%;height:440rpx"></image>
+						</view>
+						<view class="home4-item">
+							<view class="bm-product-two">
+								<block wx:for="{{ribenUrl}}" wx:key="ribenUrl" wx:if="{{index>=10&&index<16}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" style="width:340rpx;height:336rpx">
+										<image class="home4-img" src="{{item}}" />
+									</view>
+								</block>
+							</view>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddfb4c3178e0.jpg" style="width:100%;height:100rpx"></image>
+						</view>
+						<view class="bm-cms-item cms" style="width:100%;height:300rpx">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='80rpx'>
+									<block wx:for="{{ribenUrl}}" wx:key="ribenUrl" wx:if="{{index>=16&&index<19}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item}}' style="width:100%;height:300rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddfb4f7c1b6f.jpg" style="width:100%;height:100rpx"></image>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf9e42e1dc7.jpg" style="width:100%;height:440rpx"></image>
+						</view>
+						<view class="bm-cms-item cms" style="width:100%;height:500rpx">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='80rpx'>
+									<block wx:for="{{ribenUrl}}" wx:key="ribenUrl" wx:if="{{index>=19&&index<23}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item}}' style="width:100%;height:500rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf5c9fa72d6.jpg" style="width:100%;height:72rpx"></image>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf9e4c713d6.jpg" style="width:100%;height:500rpx"></image>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf98efbd1ae.jpg" style="width:100%;height:200rpx"></image>
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf98fbbff00.jpg" style="width:100%;height:200rpx"></image>
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf99127b30b.jpg" style="width:100%;height:200rpx"></image>
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf99255ae34.jpg" style="width:100%;height:200rpx"></image>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf9599160e9.jpg" style="width:100%;height:100rpx"></image>
+						</view>
+						<view class="home4-item">
+							<view class="bm-product-two">
+								<block wx:for="{{ribenUrl}}" wx:key="ribenUrl" wx:if="{{index>=23&&index<27}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" style="width:340rpx;height:160rpx">
+										<image class="home4-img" src="{{item}}" />
+									</view>
+								</block>
+							</view>
+						</view>
+						<view class="home4-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5ddf5cc6e364d.jpg" style="width:100%;height:140rpx"></image>
+						</view>
+						<view class="bm-cms-item cms" style="width:100%;height:500rpx">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='80rpx'>
+									<block wx:for="{{ribenUrl}}" wx:key="ribenUrl" wx:if="{{index>=27&&index<31}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item}}' style="width:100%;height:500rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+					</view>
+				</van-tab>
+				<van-tab title="梦幻暹罗">
+					<view class="cms-home5">
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5e1419e2670e4.jpg" style="width:100%;height:440rpx"></image>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc5301b94b4e.jpg" style="width:100%;height:320rpx"></image>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc5381708939.jpg" style="width:100%;height:140rpx"></image>
+						</view>
+						<view class="home5-item" style="width:100%;height:500rpx">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='80rpx'>
+									<block wx:for="{{mengUrl}}" wx:key="mengUrl" wx:if="{{index<4}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item}}' style="width:100%;height:500rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc538371516b.jpg" style="width:100%;height:140rpx"></image>
+						</view>
+						<view class="home5-item" style="width:100%;height:360rpx">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='80rpx'>
+									<block wx:for="{{mengUrl}}" wx:key="mengUrl" wx:if="{{index>=4&&index<8}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item}}' style="width:100%;height:360rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc53a21779c7.jpg" style="width:100%;height:140rpx"></image>
+						</view>
+						<view class="home5-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{mengdata}}" wx:key="mengdata" wx:if="{{index<=3 }}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc53a9408ef1.jpg" style="width:100%;height:140rpx"></image>
+						</view>
+						<view class="home5-item cms">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='40rpx'>
+									<block wx:for="{{mengdata}}" wx:key="mengdata" wx:if="{{index>3&&index<11 }}">
+										<swiper-item>
+											<view class='box'>
+												<image style="width:100%;height:400rpx" src='{{item.img}}'></image>
+												<view class="bm-product-item-info">
+													<view class="bm-product-item-title">{{item.title}}</view>
+													<view class="bm-product-item-subtitle">
+														<view class="subtitle">{{item.subtitle}}</view>
+													</view>
+													<view class="bm-product-item-bottom">
+														<view class="bm-product-item-tags">
+															<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+																<view class="item-tags">{{mark.name}}</view>
+															</block>
+															<view class="bm-product-item-price bm-product-item-price__before">
+																{{item.price}}起/{{item.unit}}
+															</view>
+														</view>
+													</view>
+												</view>
+												<view class="bm-product-item-type">{{item.tip_mark}}</view>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home5-item" style="margin-top:20rpx">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5e1419e2670e4.jpg" style="width:100%;height:440rpx"></image>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc53b48e7e5d.jpg" style="width:100%;height:320rpx"></image>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc53b6bca37f.jpg" style="width:100%;height:140rpx"></image>
+						</view>
+						<view class="home5-item" style="width:100%;height:480rpx">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='80rpx'>
+									<block wx:for="{{mengUrl}}" wx:key="mengUrl" wx:if="{{index>=8&&index<13}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item}}' style="width:100%;height:480rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc53e2f2c491.jpg" style="width:100%;height:140rpx"></image>
+						</view>
+						<view class="home5-item" style="width:100%;height:480rpx">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='80rpx'>
+									<block wx:for="{{mengUrl}}" wx:key="mengUrl" wx:if="{{index>=13&&index<17}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item}}' style="width:100%;height:480rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc53e8a84ca7.jpg" style="width:100%;height:140rpx"></image>
+						</view>
+						<view class="home5-item" style="width:100%;height:360rpx">
+							<view class='test'>
+								<swiper display-multiple-items='1' next-margin='80rpx'>
+									<block wx:for="{{mengUrl}}" wx:key="mengUrl" wx:if="{{index>=17&&index<21}}">
+										<swiper-item>
+											<view class='box'>
+												<image class="test-img" src='{{item}}' style="width:100%;height:360rpx"></image>
+											</view>
+										</swiper-item>
+									</block>
+								</swiper>
+							</view>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc53a21779c7.jpg" style="width:100%;height:140rpx"></image>
+						</view>
+						<view class="bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{mengdata}}" wx:key="mengdata" wx:if="{{index>=11&&index<17}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+						<view class="home5-item">
+							<image src="https://product-ssl-qiniu.bmtrip.com/product_5dc53a9408ef1.jpg" style="width:100%;height:140rpx"></image>
+						</view>
+						<view class="bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{mengdata}}" wx:key="mengdata" wx:if="{{index>=17&&index<21}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+					</view>
+				</van-tab>
+				<van-tab title="诗画欧洲">
+					<view class="cms-home6">
+						<view class="bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{oudata}}" wx:key="oudata">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+					</view>
+				</van-tab>
+				<van-tab title="小众中东非">
+					<view class="cms-home7">
+						<view class="bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{feidata}}" wx:key="feidata">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+					</view>
+				</van-tab>
+				<van-tab title="美洲澳新">
+					<view class="cms-home8">
+						<view class="bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{meidata}}" wx:key="meidata">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+					</view>
+				</van-tab>
+				<van-tab title="祖国最美">
+					<view class="cms-home9">
+						<view class="bm-cms-item">
+							<view class="bm-product-two">
+								<block wx:for="{{zuguodata}}" wx:key="zuguodata">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin">
+										<image class="bm-item-img" src="{{item.img}}" />
+										<view class="bm-product-item-info">
+											<view class="bm-product-item-title">{{item.title}}</view>
+											<view class="bm-product-item-subtitle">
+												<view>{{item.subtitle}}</view>
+											</view>
+											<view class="bm-product-item-bottom">
+												<view class="bm-product-item-tags">
+													<block wx:for="{{item.mark}}" wx:for-item="mark" wx:for-index="i" wx:key="i">
+														<view class="item-tags">{{mark.name}}</view>
+													</block>
+												</view>
+												<view class="item-price">
+													{{item.price}}起/{{item.unit}}
+												</view>
+											</view>
+											<view class="item-type">
+												私家定制游
+											</view>
+										</view>
+									</view>
+								</block>
+							</view>
+						</view>
+					</view>
+				</van-tab>
+			</van-tabs>
+		</view>
+	</view>
 </view>
