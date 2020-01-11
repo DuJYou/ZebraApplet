@@ -1,7 +1,9 @@
 <!-- pages/destination/destination.wxml -->
 <view class="box">
   <van-tree-select items="{{ items }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ itemslist.id }}" bind:click-nav="onClickNav" bind:click-item="onClickItem">
+  
     <view slot="content">
+    <scroll-view scroll-y="true" style="height: 750px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
       <view class="destinationList" >
         <view class="destination" bindtap="onClickDestinationList" wx:for="{{destinationList[mainActiveIndex].id}}" wx:if="{{kg==='false'?index<4:index<99}}" id="{{item.id}}" wx:key="{{item.index+item.id}}">
           <cover-image class="destinationImg" src="{{item.img}}" />
@@ -29,6 +31,7 @@
           <text class="price">￥{{item.price}}起/{{item.unit}}</text>
         </view>
       </view>
+    </scroll-view>
     </view>
   </van-tree-select>
 </view>

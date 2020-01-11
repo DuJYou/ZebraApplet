@@ -6,6 +6,7 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": false,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
@@ -22,11 +23,12 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
+		"bundle": false,
 		"preloadBackgroundData": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.0",
-	"appid": "wx9e92e72d8817005b",
+	"appid": "wx672c0ea3ebb4efc9",
 	"projectname": "banma",
 	"debugOptions": {
 		"hidedInDevtools": []

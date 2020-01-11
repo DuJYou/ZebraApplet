@@ -5,7 +5,7 @@
             <view class="bm-personal-info-unsign">
                 <text class="bm-personal-info-unsign-text">Hi,  终于等到你！</text>
                 <text class="bm-personal-info-unsign-info">让每个家庭享受省心、精彩的旅行体验</text>
-                <button class="bt">登录/注册</button>
+                <button class="bt" open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'>{{login}}</button>
             </view>
             <view class="myList">
                 <view class="myCoupon">

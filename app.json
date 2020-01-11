@@ -1,10 +1,12 @@
 {
+ 
   "pages": [
-    "pages/destination/destination",
     "pages/personal/personal",
+    "pages/index/index",
+    "pages/destination/destination",
+    "pages/login/login",
     "pages/feedback/feedback",
     "pages/settings/settings",
-    "pages/login/login",
     "pages/home/home",
     "pages/product/product",
     "pages/bmfind/bmfind"
