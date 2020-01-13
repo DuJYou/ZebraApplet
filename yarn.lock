@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 weui-miniprogram@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/weui-miniprogram/-/weui-miniprogram-0.2.1.tgz#419c09d3c0043854cbdcdd411727bbea814cdf48"
@@ -13,3 +14,9 @@ vant-weapp@^1.0.0-beta.4:
   resolved "http://r.cnpmjs.org/vant-weapp/download/vant-weapp-1.0.0-beta.4.tgz#32914f5c7f5de1a7a70582c060abe4b1f9f804ba"
   integrity sha1-MpFPXH9d4aenBYLAYKvksfn4BLo=
 >>>>>>> Duke
+=======
+vant-weapp@^0.5.27:
+  version "0.5.27"
+  resolved "https://registry.yarnpkg.com/vant-weapp/-/vant-weapp-0.5.27.tgz#b029980dbdcc7f90aff9dc9db8e2bac5ef118d1b"
+  integrity sha512-wmbpPWbpIk/Nl022Yfu0LNV+rSBPxnWTsZePVo6De4FxY3SWw47+Ip6rxLgdnG00/FntbymgvVw4xlaW+WmC+Q==
+>>>>>>> origin/hy
