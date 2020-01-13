@@ -1,8 +1,8 @@
 {
  
   "pages": [
-    "pages/personal/personal",
     "pages/index/index",
+    "pages/personal/personal",
     "pages/destination/destination",
     "pages/login/login",
     "pages/feedback/feedback",
