@@ -5,7 +5,11 @@ const defaultOptions = {
     message: '',
     show: true,
     zIndex: 1000,
+<<<<<<< HEAD
     duration: 2000,
+=======
+    duration: 3000,
+>>>>>>> quting
     position: 'middle',
     forbidClick: false,
     loadingType: 'circular',
@@ -21,7 +25,11 @@ function getContext() {
     return pages[pages.length - 1];
 }
 function Toast(toastOptions) {
+<<<<<<< HEAD
     const options = Object.assign(Object.assign({}, currentOptions), parseOptions(toastOptions));
+=======
+    const options = Object.assign({}, currentOptions, parseOptions(toastOptions));
+>>>>>>> quting
     const context = options.context || getContext();
     const toast = context.selectComponent(options.selector);
     if (!toast) {
@@ -31,13 +39,21 @@ function Toast(toastOptions) {
     delete options.context;
     delete options.selector;
     toast.clear = () => {
+<<<<<<< HEAD
         toast.setData({ show: false });
+=======
+        toast.set({ show: false });
+>>>>>>> quting
         if (options.onClose) {
             options.onClose();
         }
     };
     queue.push(toast);
+<<<<<<< HEAD
     toast.setData(options);
+=======
+    toast.set(options);
+>>>>>>> quting
     clearTimeout(toast.timer);
     if (options.duration > 0) {
         toast.timer = setTimeout(() => {

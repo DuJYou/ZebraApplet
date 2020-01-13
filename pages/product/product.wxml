@@ -1,4 +1,5 @@
 <!--pages/product/product.wxml-->
+<<<<<<< HEAD
 <view class="imageWrap" >
     <image wx:if="{{click===0}}" src="https://product-ssl-qiniu.bmtrip.com/20191226_banner_01.png" alt=""/>
     <image wx:if="{{click===1}}" src="https://product-ssl-qiniu.bmtrip.com/20191226_banner_02.png" alt=""/>
@@ -25,3 +26,6 @@
   bind:close="onClose"
 >
 </van-popup>
+=======
+<text>pages/product/product.wxml</text>
+>>>>>>> quting

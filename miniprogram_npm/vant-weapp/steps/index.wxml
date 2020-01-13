@@ -12,6 +12,7 @@
         <view>{{ item.desc }}</view>
       </view>
       <view class="van-step__circle-container">
+<<<<<<< HEAD
         <block wx:if="{{ index !== active }}">
           <van-icon
             wx:if="{{ inactiveIcon }}"
@@ -32,6 +33,12 @@
         wx:if="{{ index !== steps.length - 1 }}"
         class="van-step__line" style="{{ index < active ? 'background-color: ' + activeColor : '' }}"
       />
+=======
+        <view class="van-step__circle" wx:if="{{ index !== active }}" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
+        <van-icon wx:else name="checked" color="{{ activeColor }}" custom-class="van-step__active" />
+      </view>
+      <view wx:if="{{ index !== steps.length - 1 }}" class="van-step__line" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
+>>>>>>> quting
     </view>
   </view>
 </view>

@@ -1,8 +1,12 @@
 {
+<<<<<<< HEAD
   "usingComponents": {
     "van-tab": "../../components/vant/tab/index",
     "van-tabs": "../../components/vant/tabs/index",    
     "van-field": "../../components/vant/field/index",
     "van-button": "../../components/vant/button/index"
   }
+=======
+  "usingComponents": {}
+>>>>>>> quting
 }

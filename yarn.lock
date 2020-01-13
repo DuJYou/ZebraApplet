@@ -4,6 +4,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 weui-miniprogram@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/weui-miniprogram/-/weui-miniprogram-0.2.1.tgz#419c09d3c0043854cbdcdd411727bbea814cdf48"
@@ -15,8 +16,18 @@ vant-weapp@^1.0.0-beta.4:
   integrity sha1-MpFPXH9d4aenBYLAYKvksfn4BLo=
 >>>>>>> Duke
 =======
+=======
+>>>>>>> quting
 vant-weapp@^0.5.27:
   version "0.5.27"
   resolved "https://registry.yarnpkg.com/vant-weapp/-/vant-weapp-0.5.27.tgz#b029980dbdcc7f90aff9dc9db8e2bac5ef118d1b"
   integrity sha512-wmbpPWbpIk/Nl022Yfu0LNV+rSBPxnWTsZePVo6De4FxY3SWw47+Ip6rxLgdnG00/FntbymgvVw4xlaW+WmC+Q==
+<<<<<<< HEAD
 >>>>>>> origin/hy
+=======
+
+weui-miniprogram@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/weui-miniprogram/-/weui-miniprogram-0.2.1.tgz#419c09d3c0043854cbdcdd411727bbea814cdf48"
+  integrity sha512-Of/r4QwmlzMwvpW9BQHcL/KW3WV5kw+7yxCFSob3UIqMpwLxKHuBrQajuCVkM3CbqxIpc0XWyDYnpCWk3VkLYg==
+>>>>>>> quting

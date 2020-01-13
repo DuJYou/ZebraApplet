@@ -1,6 +1,10 @@
 /// <reference types="miniprogram-api-typings" />
 export declare namespace Weapp {
+<<<<<<< HEAD
     export interface FormField {
+=======
+    interface FormField {
+>>>>>>> quting
         data: {
             name: string;
             value: any;
@@ -13,7 +17,11 @@ export declare namespace Weapp {
             [key: string]: any;
         };
     }
+<<<<<<< HEAD
     export interface Event {
+=======
+    interface Event {
+>>>>>>> quting
         /**
          * 代表事件的类型。
          */
@@ -57,14 +65,22 @@ export declare namespace Weapp {
          */
         clientY: number;
     }
+<<<<<<< HEAD
     export interface TouchEvent extends Event {
+=======
+    interface TouchEvent extends Event {
+>>>>>>> quting
         touches: Array<Touch>;
         changedTouches: Array<Touch>;
     }
     /**
      * relation定义，miniprogram-api-typings缺少this定义
      */
+<<<<<<< HEAD
     export interface RelationOption<Instance> {
+=======
+    interface RelationOption<Instance> {
+>>>>>>> quting
         /** 目标组件的相对关系 */
         type: 'parent' | 'child' | 'ancestor' | 'descendant';
         /** 关系生命周期函数，当关系被建立在页面节点树中时触发，触发时机在组件attached生命周期之后 */
@@ -83,12 +99,17 @@ export declare namespace Weapp {
     /**
      * watch定义
      */
+<<<<<<< HEAD
     export interface WatchOption<Instance> {
+=======
+    interface WatchOption<Instance> {
+>>>>>>> quting
         [name: string]: string | Observer<Instance, any>;
     }
     /**
      * methods定义，miniprogram-api-typings缺少this定义
      */
+<<<<<<< HEAD
     export interface MethodOption<Instance> {
         [name: string]: (this: Instance, ...args: any[]) => any;
     }
@@ -97,6 +118,16 @@ export declare namespace Weapp {
     }
     type PropertyType = StringConstructor | NumberConstructor | BooleanConstructor | ArrayConstructor | ObjectConstructor | FunctionConstructor | null;
     export interface PropertyOption {
+=======
+    interface MethodOption<Instance> {
+        [name: string]: (this: Instance, ...args: any[]) => any;
+    }
+    interface ComputedOption<Instance> {
+        [name: string]: (this: Instance) => any;
+    }
+    type PropertyType = StringConstructor | NumberConstructor | BooleanConstructor | ArrayConstructor | ObjectConstructor | FunctionConstructor | null;
+    interface PropertyOption {
+>>>>>>> quting
         [name: string]: PropertyType | PropertyType[] | {
             /** 属性类型 */
             type: PropertyType | PropertyType[];
@@ -108,5 +139,8 @@ export declare namespace Weapp {
             optionalTypes?: PropertyType[];
         };
     }
+<<<<<<< HEAD
     export {};
+=======
+>>>>>>> quting
 }

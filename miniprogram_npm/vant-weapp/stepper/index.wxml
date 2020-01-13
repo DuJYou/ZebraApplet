@@ -2,6 +2,7 @@
 
 <view class="van-stepper custom-class">
   <view
+<<<<<<< HEAD
     wx:if="{{ showMinus }}"
     data-type="minus"
     style="{{ buttonStyle }}"
@@ -11,11 +12,22 @@
     bind:tap="onTap"
     bind:touchstart="onTouchStart"
     bind:touchend="onTouchEnd"
+=======
+    class="minus-class {{ utils.bem('stepper__minus', { disabled: minusDisabled }) }}"
+    style="{{ showMinus ? '' : 'display: none;' }}"
+    hover-class="van-stepper__minus--hover"
+    hover-stay-time="70"
+    bind:tap="onMinus"
+>>>>>>> quting
   />
   <input
     type="{{ integer ? 'number' : 'digit' }}"
     class="input-class {{ utils.bem('stepper__input', { disabled: disabled || disableInput }) }}"
+<<<<<<< HEAD
     style="{{ inputStyle }}"
+=======
+    style="{{ inputWidth ? 'width: ' + inputWidth : '' }}"
+>>>>>>> quting
     value="{{ value }}"
     focus="{{ focus }}"
     disabled="{{ disabled || disableInput }}"
@@ -24,6 +36,7 @@
     bind:blur="onBlur"
   />
   <view
+<<<<<<< HEAD
     wx:if="{{ showPlus }}"
     data-type="plus"
     style="{{ buttonStyle }}"
@@ -33,5 +46,12 @@
     bind:tap="onTap"
     bind:touchstart="onTouchStart"
     bind:touchend="onTouchEnd"
+=======
+    class="plus-class {{ utils.bem('stepper__plus', { disabled: plusDisabled }) }}"
+    style="{{ showPlus ? '' : 'display: none;' }}"
+    hover-class="van-stepper__plus--hover"
+    hover-stay-time="70"
+    bind:tap="onPlus"
+>>>>>>> quting
   />
 </view>

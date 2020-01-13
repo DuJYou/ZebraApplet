@@ -34,17 +34,42 @@ VantComponent({
             this.setIndex(defaultIndex);
         });
     },
+<<<<<<< HEAD
+=======
+    computed: {
+        count() {
+            return this.data.options.length;
+        },
+        baseOffset() {
+            const { data } = this;
+            return (data.itemHeight * (data.visibleItemCount - 1)) / 2;
+        },
+        wrapperStyle() {
+            const { data } = this;
+            return [
+                `transition: ${data.duration}ms`,
+                `transform: translate3d(0, ${data.offset + data.baseOffset}px, 0)`,
+                `line-height: ${data.itemHeight}px`
+            ].join('; ');
+        }
+    },
+>>>>>>> quting
     watch: {
         defaultIndex(value) {
             this.setIndex(value);
         }
     },
     methods: {
+<<<<<<< HEAD
         getCount() {
             return this.data.options.length;
         },
         onTouchStart(event) {
             this.setData({
+=======
+        onTouchStart(event) {
+            this.set({
+>>>>>>> quting
                 startY: event.touches[0].clientY,
                 startOffset: this.data.offset,
                 duration: 0
@@ -53,15 +78,27 @@ VantComponent({
         onTouchMove(event) {
             const { data } = this;
             const deltaY = event.touches[0].clientY - data.startY;
+<<<<<<< HEAD
             this.setData({
                 offset: range(data.startOffset + deltaY, -(this.getCount() * data.itemHeight), data.itemHeight)
+=======
+            this.set({
+                offset: range(data.startOffset + deltaY, -(data.count * data.itemHeight), data.itemHeight)
+>>>>>>> quting
             });
         },
         onTouchEnd() {
             const { data } = this;
             if (data.offset !== data.startOffset) {
+<<<<<<< HEAD
                 this.setData({ duration: DEFAULT_DURATION });
                 const index = range(Math.round(-data.offset / data.itemHeight), 0, this.getCount() - 1);
+=======
+                this.set({
+                    duration: DEFAULT_DURATION
+                });
+                const index = range(Math.round(-data.offset / data.itemHeight), 0, data.count - 1);
+>>>>>>> quting
                 this.setIndex(index, true);
             }
         },
@@ -71,9 +108,14 @@ VantComponent({
         },
         adjustIndex(index) {
             const { data } = this;
+<<<<<<< HEAD
             const count = this.getCount();
             index = range(index, 0, count);
             for (let i = index; i < count; i++) {
+=======
+            index = range(index, 0, data.count);
+            for (let i = index; i < data.count; i++) {
+>>>>>>> quting
                 if (!this.isDisabled(data.options[i]))
                     return i;
             }

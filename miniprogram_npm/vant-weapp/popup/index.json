@@ -1,7 +1,10 @@
 {
   "component": true,
   "usingComponents": {
+<<<<<<< HEAD
     "van-icon": "../icon/index",
+=======
+>>>>>>> quting
     "van-overlay": "../overlay/index"
   }
 }

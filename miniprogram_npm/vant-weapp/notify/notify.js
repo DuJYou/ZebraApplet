@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { WHITE } from '../common/color';
 const defaultOptions = {
     selector: '#van-notify',
@@ -14,6 +15,15 @@ const defaultOptions = {
 };
 function parseOptions(message) {
     return typeof message === 'string' ? { message } : message;
+=======
+import { isObj } from '../common/utils';
+const defaultOptions = {
+    selector: '#van-notify',
+    duration: 3000
+};
+function parseOptions(text) {
+    return isObj(text) ? text : { text };
+>>>>>>> quting
 }
 function getContext() {
     const pages = getCurrentPages();

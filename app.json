@@ -1,5 +1,6 @@
 {
   "pages": [
+<<<<<<< HEAD
     "pages/index/index",
     "pages/personal/personal",
     "pages/destination/destination",
@@ -10,6 +11,15 @@
     "pages/home/home",
     "pages/product/product",
     "pages/bmfind/bmfind"
+=======
+    "pages/bmfind/bmfind",
+    "pages/home/home",
+    "pages/destination/destination",
+    "pages/product/product",
+    "pages/personal/personal",
+    "components/find-items/find-item",
+    "pages/findDetail/findDetail"
+>>>>>>> quting
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -53,5 +63,9 @@
       }
     ]
   },
+<<<<<<< HEAD
   "sitemapLocation": "sitemap57.json"
+=======
+  "sitemapLocation": "sitemap5.json"
+>>>>>>> quting
 }

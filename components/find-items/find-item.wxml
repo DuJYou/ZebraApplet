@@ -1,0 +1,9 @@
+<!--components/find-items/find-item.wxml-->
+<view class="find-itemBox" bindtap="getId" data-id="{{ list.id }}">
+  <view class="imageBox">
+    <image src="{{ list.head_pic }}" class="findImg"></image>
+    <view class="tipTitle">{{ list.sort_name }}</view>
+  </view>
+  <view class="findtitle">{{ list.title }}</view>
+  <view class="findsubtitle">{{ list.subtitle }}</view>
+</view>

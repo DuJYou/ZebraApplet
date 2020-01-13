@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 <view class="custom-class van-loading {{ vertical ? 'van-loading--vertical' : '' }}">
   <view
     class="van-loading__spinner van-loading__spinner--{{ type }}"
     style="color: {{ color }}; width: {{ sizeWithUnit }}; height: {{ sizeWithUnit }}"
+=======
+<view
+  class="van-loading custom-class"
+  style="width: {{ size }}; height: {{ size }}"
+>
+  <view
+    class="van-loading__spinner van-loading__spinner--{{ type }}"
+    style="color: {{ color }};"
+>>>>>>> quting
   >
     <view
       wx:if="{{ type === 'spinner' }}"
@@ -10,7 +20,10 @@
       class="van-loading__dot"
     />
   </view>
+<<<<<<< HEAD
   <view class="van-loading__text" style="font-size: {{ textSizeWithUnit }};">
     <slot />
   </view>
+=======
+>>>>>>> quting
 </view>

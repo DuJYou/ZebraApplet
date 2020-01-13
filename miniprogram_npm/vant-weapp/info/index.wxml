@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <wxs src="../wxs/utils.wxs" module="utils" />
 
 <view
@@ -5,3 +6,10 @@
   class="custom-class van-info {{ utils.bem('info', { dot }) }}"
   style="{{ customStyle }}"
 >{{ dot ? '' : info }}</view>
+=======
+<view
+  wx:if="{{ info !== null && info !== '' }}"
+  class="custom-class van-info"
+  style="{{ customStyle }}"
+>{{ info }}</view>
+>>>>>>> quting

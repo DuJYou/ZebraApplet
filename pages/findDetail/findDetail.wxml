@@ -1,0 +1,9 @@
+<!--pages/findDetail/findDetail.wxml-->
+
+<view class="detailBox">
+  <view class="sort">{{sort}}</view>
+  <view class="title">{{title}}</view>
+  <view class="subtitle">{{subtitle}}</view>
+  <!-- 富文本解析 -->
+  <rich-text nodes='{{list}}'></rich-text>
+</view>

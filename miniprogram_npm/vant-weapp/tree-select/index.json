@@ -1,8 +1,12 @@
 {
   "component": true,
   "usingComponents": {
+<<<<<<< HEAD
     "van-icon": "../icon/index",
     "van-sidebar": "../sidebar/index",
     "van-sidebar-item": "../sidebar-item/index"
+=======
+    "van-icon": "../icon/index"
+>>>>>>> quting
   }
 }

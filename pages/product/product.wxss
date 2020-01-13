@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/product/product.wxss */
 .imageWrap{
     width: 100%;
@@ -28,3 +29,6 @@
     position: relative;
     font-size: 12.48px;
 }
+=======
+/* pages/product/product.wxss */
+>>>>>>> quting

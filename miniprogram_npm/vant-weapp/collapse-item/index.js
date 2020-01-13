@@ -39,7 +39,11 @@ VantComponent({
             if (this.data.expanded) {
                 data.contentHeight = 'auto';
             }
+<<<<<<< HEAD
             this.setData(data);
+=======
+            this.set(data);
+>>>>>>> quting
         });
     },
     methods: {
@@ -87,7 +91,11 @@ VantComponent({
         },
         onTransitionEnd() {
             if (this.data.expanded) {
+<<<<<<< HEAD
                 this.setData({
+=======
+                this.set({
+>>>>>>> quting
                     contentHeight: 'auto'
                 });
             }

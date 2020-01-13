@@ -1,7 +1,11 @@
 {
+<<<<<<< HEAD
   "usingComponents": {
     "private":"/component/product/private/private",
     "enterprise":"/component/product/enterprise/enterprise",
     "van-popup": "../../../miniprogram_npm/vant-weapp/popup/index"
   }
+=======
+  "usingComponents": {}
+>>>>>>> quting
 }

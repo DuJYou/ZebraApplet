@@ -1,4 +1,5 @@
 import { VantComponent } from '../common/component';
+<<<<<<< HEAD
 import { addUnit } from '../common/utils';
 VantComponent({
     props: {
@@ -8,11 +9,19 @@ VantComponent({
             type: null,
             observer: 'setSizeWithUnit'
         },
+=======
+VantComponent({
+    props: {
+        info: null,
+        name: String,
+        size: String,
+>>>>>>> quting
         color: String,
         customStyle: String,
         classPrefix: {
             type: String,
             value: 'van-icon'
+<<<<<<< HEAD
         },
         name: {
             type: String,
@@ -34,6 +43,13 @@ VantComponent({
             this.setData({
                 sizeWithUnit: addUnit(size)
             });
+=======
+        }
+    },
+    methods: {
+        onClick() {
+            this.$emit('click');
+>>>>>>> quting
         }
     }
 });

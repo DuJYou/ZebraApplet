@@ -6,7 +6,11 @@ export function isObj(x) {
     return x !== null && (type === 'object' || type === 'function');
 }
 export function isNumber(value) {
+<<<<<<< HEAD
     return /^\d+(\.\d+)?$/.test(value);
+=======
+    return /^\d+$/.test(value);
+>>>>>>> quting
 }
 export function range(num, min, max) {
     return Math.min(Math.max(num, min), max);
@@ -23,6 +27,7 @@ export function getSystemInfoSync() {
     }
     return systemInfo;
 }
+<<<<<<< HEAD
 export function addUnit(value) {
     if (!isDef(value)) {
         return undefined;
@@ -30,3 +35,5 @@ export function addUnit(value) {
     value = String(value);
     return isNumber(value) ? `${value}px` : value;
 }
+=======
+>>>>>>> quting

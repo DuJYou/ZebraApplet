@@ -27,7 +27,11 @@ VantComponent({
             const style = gutter
                 ? `margin-right: ${margin}; margin-left: ${margin};`
                 : '';
+<<<<<<< HEAD
             this.setData({ style });
+=======
+            this.set({ style });
+>>>>>>> quting
             this.getRelationNodes('../col/index').forEach(col => {
                 col.setGutter(this.data.gutter);
             });

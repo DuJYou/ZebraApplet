@@ -18,7 +18,11 @@ export const transition = function (showDefaultValue) {
             },
             // @ts-ignore
             duration: {
+<<<<<<< HEAD
                 type: null,
+=======
+                type: [Number, Object],
+>>>>>>> quting
                 value: 300,
                 observer: 'observeDuration'
             },
@@ -39,20 +43,36 @@ export const transition = function (showDefaultValue) {
         },
         methods: {
             observeShow(value) {
+<<<<<<< HEAD
                 value ? this.enter() : this.leave();
+=======
+                if (value) {
+                    this.enter();
+                }
+                else {
+                    this.leave();
+                }
+>>>>>>> quting
             },
             enter() {
                 const { duration, name } = this.data;
                 const classNames = getClassNames(name);
                 const currentDuration = isObj(duration) ? duration.enter : duration;
                 this.status = 'enter';
+<<<<<<< HEAD
                 this.$emit('before-enter');
+=======
+>>>>>>> quting
                 Promise.resolve()
                     .then(nextTick)
                     .then(() => {
                     this.checkStatus('enter');
+<<<<<<< HEAD
                     this.$emit('enter');
                     this.setData({
+=======
+                    this.set({
+>>>>>>> quting
                         inited: true,
                         display: true,
                         classes: classNames.enter,
@@ -62,38 +82,60 @@ export const transition = function (showDefaultValue) {
                     .then(nextTick)
                     .then(() => {
                     this.checkStatus('enter');
+<<<<<<< HEAD
                     this.transitionEnded = false;
                     this.setData({
+=======
+                    this.set({
+>>>>>>> quting
                         classes: classNames['enter-to']
                     });
                 })
                     .catch(() => { });
             },
             leave() {
+<<<<<<< HEAD
                 if (!this.data.display) {
                     return;
                 }
+=======
+>>>>>>> quting
                 const { duration, name } = this.data;
                 const classNames = getClassNames(name);
                 const currentDuration = isObj(duration) ? duration.leave : duration;
                 this.status = 'leave';
+<<<<<<< HEAD
                 this.$emit('before-leave');
+=======
+>>>>>>> quting
                 Promise.resolve()
                     .then(nextTick)
                     .then(() => {
                     this.checkStatus('leave');
+<<<<<<< HEAD
                     this.$emit('leave');
                     this.setData({
+=======
+                    this.set({
+>>>>>>> quting
                         classes: classNames.leave,
                         currentDuration
                     });
                 })
+<<<<<<< HEAD
                     .then(nextTick)
                     .then(() => {
                     this.checkStatus('leave');
                     this.transitionEnded = false;
                     setTimeout(() => this.onTransitionEnd(), currentDuration);
                     this.setData({
+=======
+                    .then(() => setTimeout(() => this.onTransitionEnd(), currentDuration))
+                    .then(nextTick)
+                    .then(() => {
+                    this.checkStatus('leave');
+                    this.set({
+>>>>>>> quting
                         classes: classNames['leave-to']
                     });
                 })
@@ -105,6 +147,7 @@ export const transition = function (showDefaultValue) {
                 }
             },
             onTransitionEnd() {
+<<<<<<< HEAD
                 if (this.transitionEnded) {
                     return;
                 }
@@ -113,6 +156,11 @@ export const transition = function (showDefaultValue) {
                 const { show, display } = this.data;
                 if (!show && display) {
                     this.setData({ display: false });
+=======
+                if (!this.data.show) {
+                    this.set({ display: false });
+                    this.$emit('transitionEnd');
+>>>>>>> quting
                 }
             }
         }

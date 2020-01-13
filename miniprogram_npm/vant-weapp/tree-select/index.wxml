@@ -3,6 +3,7 @@
 
 <view
   class="van-tree-select"
+<<<<<<< HEAD
   style="height: {{ innerHeight }}"
 >
   <scroll-view scroll-y class="van-tree-select__nav">
@@ -24,6 +25,30 @@
       wx:for="{{ subItems }}"
       wx:key="id"
       class="van-ellipsis content-item-class {{ utils.bem('tree-select__item', { active: wxs.isActive(activeId, item.id), disabled: item.disabled }) }} {{ wxs.isActive(activeId, item.id) ? 'content-active-class' : '' }} {{ item.disabled ? 'content-disabled-class' : '' }}"
+=======
+  style="height: {{ mainHeight }}px"
+>
+  <scroll-view scroll-y class="van-tree-select__nav">
+    <view
+      wx:for="{{ items }}"
+      wx:key="index"
+      class="van-ellipsis main-item-class {{ utils.bem('tree-select__nitem', { active: mainActiveIndex === index, disabled: item.disabled }) }} {{ mainActiveIndex === index ? 'main-active-class' : '' }} {{ item.disabled ? 'main-disabled-class' : '' }}"
+      data-index="{{ index }}"
+      bind:tap="onClickNav"
+    >
+      {{ item.text }}
+    </view>
+  </scroll-view>
+  <scroll-view
+    scroll-y
+    class="van-tree-select__content"
+    style="height: {{ itemHeight }}px"
+  >
+    <view
+      wx:for="{{ subItems }}"
+      wx:key="id"
+      class="van-ellipsis van-hairline--bottom content-item-class {{ utils.bem('tree-select__item', { active: wxs.isActive(activeId, item.id), disabled: item.disabled }) }} {{ wxs.isActive(activeId, item.id) ? 'content-active-class' : '' }} {{ item.disabled ? 'content-disabled-class' : '' }}"
+>>>>>>> quting
       data-item="{{ item }}"
       bind:tap="onSelectItem"
     >

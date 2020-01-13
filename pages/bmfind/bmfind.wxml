@@ -1,2 +1,62 @@
+<<<<<<< HEAD
 <!--pages/bmfind/bmfind.wxml-->
 <text>pages/bmfind/bmfind.wxml</text>
+=======
+<view class="findCon">
+  <view class="topBox">
+    <view class="titleBox">
+      <view class="contact" bindtap="showPopup">
+        <image src="../../image/erji1.png"></image>
+      </view>
+      <view class="title">斑马发现</view>
+      <view class="search">
+        <image src="../../image/search1.png"></image>
+      </view>
+    </view>
+
+    <van-tabs class="navBox" color="#fa3" sticky="{{40}}" active="{{ active }}" lazy-render="{{ false }}" duration="{{0}}" bind:click="clickChange" line-width="{{ 18 }}" color="#c14374" line-height="{{ 3 }}">
+      <van-tab wx:for="{{titleList}}" wx:key="id" title="{{item.name}}"></van-tab>
+    </van-tabs>
+    <van-popup show="{{ show }}" round position="bottom" custom-style="height: 35%" closeabl="{{ true }}" bind:close="onClose" >
+      <view class="popupTitle">
+        <view>客户服务</view>
+        <view class="closeIcon" bindtap="onClose">
+          <image src="/image/close.png"></image>
+        </view>
+      </view>
+      <view class="phone1">
+        <view class="p1L">
+          <view>拨打客服电话</view>
+          <view>400-021-9988</view>
+          <view>服务时间: 周一至周日 9:00 - 22:00</view>
+        </view>
+        <view class="p1R">
+          <image src="/image/phone.png"></image>
+        </view>
+      </view>
+      <view class="phone2">
+        <view class="p2L">
+          <view>留言咨询</view>
+          <view>服务时间: 周一至周日 9:00 - 24:00</view>
+        </view>
+        <view class="p2R">
+          <image src="/image/mail.png"></image>
+        </view>
+      </view>
+    </van-popup>
+  </view>
+  <scroll-view wx:if="{{showView}}" class="content" scroll-y="true" style="height: 100%;" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+    <find-items wx:for="{{list}}" wx:key="id" list="{{item}}"></find-items>
+    <!-- loading -->
+    <view class="loading" wx:if="{{loadingShow}}">
+      <image width="20" height="20" src="/image/loading.gif"></image>
+    </view>
+    <view class="nomore" wx:if="{{nomore}}">-没有更多了-</view>
+    <!-- 底部100px占位符 -->
+    <view class="space100"></view>
+  </scroll-view>
+
+
+</view>
+>>>>>>> quting

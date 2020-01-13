@@ -1,5 +1,9 @@
 import { VantComponent } from '../common/component';
 import { transition } from '../mixins/transition';
+<<<<<<< HEAD
+=======
+import { safeArea } from '../mixins/safe-area';
+>>>>>>> quting
 VantComponent({
     classes: [
         'enter-class',
@@ -9,16 +13,26 @@ VantComponent({
         'leave-active-class',
         'leave-to-class'
     ],
+<<<<<<< HEAD
     mixins: [transition(false)],
     props: {
         round: Boolean,
         closeable: Boolean,
         customStyle: String,
         overlayStyle: String,
+=======
+    mixins: [transition(false), safeArea()],
+    props: {
+>>>>>>> quting
         transition: {
             type: String,
             observer: 'observeClass'
         },
+<<<<<<< HEAD
+=======
+        customStyle: String,
+        overlayStyle: String,
+>>>>>>> quting
         zIndex: {
             type: Number,
             value: 100
@@ -27,6 +41,7 @@ VantComponent({
             type: Boolean,
             value: true
         },
+<<<<<<< HEAD
         closeIcon: {
             type: String,
             value: 'cross'
@@ -35,6 +50,8 @@ VantComponent({
             type: String,
             value: 'top-right'
         },
+=======
+>>>>>>> quting
         closeOnClickOverlay: {
             type: Boolean,
             value: true
@@ -43,6 +60,7 @@ VantComponent({
             type: String,
             value: 'center',
             observer: 'observeClass'
+<<<<<<< HEAD
         },
         safeAreaInsetBottom: {
             type: Boolean,
@@ -51,15 +69,20 @@ VantComponent({
         safeAreaInsetTop: {
             type: Boolean,
             value: false
+=======
+>>>>>>> quting
         }
     },
     created() {
         this.observeClass();
     },
     methods: {
+<<<<<<< HEAD
         onClickCloseIcon() {
             this.$emit('close');
         },
+=======
+>>>>>>> quting
         onClickOverlay() {
             this.$emit('click-overlay');
             if (this.data.closeOnClickOverlay) {
@@ -74,7 +97,11 @@ VantComponent({
             if (transition === 'none') {
                 updateData.duration = 0;
             }
+<<<<<<< HEAD
             this.setData(updateData);
+=======
+            this.set(updateData);
+>>>>>>> quting
         }
     }
 });

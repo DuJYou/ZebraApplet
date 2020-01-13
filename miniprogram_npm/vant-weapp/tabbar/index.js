@@ -1,5 +1,11 @@
 import { VantComponent } from '../common/component';
+<<<<<<< HEAD
 VantComponent({
+=======
+import { safeArea } from '../mixins/safe-area';
+VantComponent({
+    mixins: [safeArea()],
+>>>>>>> quting
     relation: {
         name: 'tabbar-item',
         type: 'descendant',
@@ -15,7 +21,11 @@ VantComponent({
     },
     props: {
         active: {
+<<<<<<< HEAD
             type: null,
+=======
+            type: [Number, String],
+>>>>>>> quting
             observer: 'updateChildren'
         },
         activeColor: {
@@ -37,10 +47,13 @@ VantComponent({
         zIndex: {
             type: Number,
             value: 1
+<<<<<<< HEAD
         },
         safeAreaInsetBottom: {
             type: Boolean,
             value: true
+=======
+>>>>>>> quting
         }
     },
     beforeCreate() {
