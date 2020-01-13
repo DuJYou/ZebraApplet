@@ -8,8 +8,7 @@
     "pages/settings/settings",
     "pages/home/home",
     "pages/product/product",
-    "pages/bmfind/bmfind",
-    "pages/detail/detail"
+    "pages/bmfind/bmfind"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

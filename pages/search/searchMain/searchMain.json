@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "header-search" : "/component/search/header/header",
+    "mp-icon": "../../miniprogram_npm/weui-miniprogram/icon/icon",
+    "search-tab":"/component/search/tab/tab",
+    "search-term":"/component/search/searchTerm/searchTerm",
+    "search-main":"/component/search/searchMain/searchMain",
+    "page404":"/component/search/page404/page404",
+    "van-popup": "../../../miniprogram_npm/vant-weapp/popup/index"
+  }
+}

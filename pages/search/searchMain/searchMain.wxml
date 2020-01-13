@@ -1,0 +1,37 @@
+<!--pages/search/searchMain/searchMain.wxml-->
+<view class="searchMainWRAP">
+    <view class="searchHeade" >
+        <view class="searchMainHeaderWarp">
+            <mp-icon bindtap="backSearchDoor" class="searchMainHeaderWarpIcon" icon="back" color="black" size="{{10}}"></mp-icon>
+            <header-search keyword="{{keyword}}" bind:headerKeyword="headerKeyword" class="header-search"></header-search>
+        </view>
+    </view>
+    <block wx:if="{{page404}}">
+        <page404></page404>
+    </block>
+    <block>
+        <view class="searchMainTab">
+            <search-tab titleList="{{title}}" bind:changeType="changeType"></search-tab>
+        </view>
+        <search-term bind:clickTermView="clickTermView" bind:clickShai="clickShai"></search-term>
+    <scroll-view wx:if="{{case}}" scroll-y="{{true}}" class="searchbody" bindscrolltolower="lower" lower-threshold="{{10}}">
+        <search-main list="{{list}}"></search-main>
+       <view class="loadingpic" wx:if="{{loadingPicCase}}">
+            <image src="https://image.hongbeibang.com/FhzJi79pYPlhhR-6ArGxcmvv2igr?100X20&imageView2/1/w/100/h/20"></image>
+       </view> 
+    </scroll-view>
+    </block>
+</view>
+<van-popup
+  show="{{ show }}"
+  position="top"
+  custom-style="height: 100%;"
+  bind:close="onClose"
+>
+<view class="ShaWrap">
+<image class="kuimg" src="../../../image/bug.jpg"></image>
+<view class="ku">数据拿不到 POST请求带请求头，好蓝啊</view>
+<button bindtap="onClose">回去吧</button>
+</view>
+</van-popup>
+

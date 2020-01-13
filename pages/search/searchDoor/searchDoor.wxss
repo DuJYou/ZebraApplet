@@ -1,0 +1,5 @@
+/* pages/index/index.wxss */
+.searchMain{
+    background-color: #fff;
+    height: 100%;
+}
