@@ -12,15 +12,11 @@ VantComponent({
         activeColor: {
             type: String,
             value: GREEN
-<<<<<<< HEAD
         },
         activeIcon: {
             type: String,
             value: 'checked'
         },
         inactiveIcon: String
-=======
-        }
->>>>>>> quting
     }
 });

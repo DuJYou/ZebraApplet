@@ -1,5 +1,4 @@
 import { VantComponent } from '../common/component';
-<<<<<<< HEAD
 VantComponent({
     relation: {
         type: 'descendant',
@@ -20,9 +19,4 @@ VantComponent({
             value: true
         }
     }
-=======
-import { safeArea } from '../mixins/safe-area';
-VantComponent({
-    mixins: [safeArea()]
->>>>>>> quting
 });

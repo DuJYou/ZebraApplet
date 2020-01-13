@@ -33,25 +33,15 @@ function getMonthEndDay(year, month) {
 const defaultFormatter = (_, value) => value;
 VantComponent({
     classes: ['active-class', 'toolbar-class', 'column-class'],
-<<<<<<< HEAD
     props: Object.assign(Object.assign({}, pickerProps), { value: null, filter: null, type: {
-=======
-    props: Object.assign({}, pickerProps, { formatter: {
-            type: Function,
-            value: defaultFormatter
-        }, value: null, type: {
->>>>>>> quting
             type: String,
             value: 'datetime'
         }, showToolbar: {
             type: Boolean,
             value: true
-<<<<<<< HEAD
         }, formatter: {
             type: null,
             value: defaultFormatter
-=======
->>>>>>> quting
         }, minDate: {
             type: Number,
             value: new Date(currentYear - 10, 0, 1).getTime()
@@ -110,7 +100,6 @@ VantComponent({
         },
         updateColumns() {
             const { formatter = defaultFormatter } = this.data;
-<<<<<<< HEAD
             const results = this.getOriginColumns().map(column => ({
                 values: column.values.map(value => formatter(column.type, value))
             }));
@@ -130,17 +119,6 @@ VantComponent({
                 return { type, values };
             });
             return results;
-=======
-            const results = this.getRanges().map(({ type, range }) => {
-                const values = times(range[1] - range[0] + 1, index => {
-                    let value = range[0] + index;
-                    value = type === 'year' ? `${value}` : padZero(value);
-                    return formatter(type, value);
-                });
-                return { values };
-            });
-            return this.set({ columns: results });
->>>>>>> quting
         },
         getRanges() {
             const { data } = this;
@@ -255,11 +233,7 @@ VantComponent({
             const picker = this.getPicker();
             if (data.type === 'time') {
                 const indexes = picker.getIndexes();
-<<<<<<< HEAD
                 value = `${+data.columns[0].values[indexes[0]]}:${+data.columns[1].values[indexes[1]]}`;
-=======
-                value = `${indexes[0] + data.minHour}:${indexes[1] + data.minMinute}`;
->>>>>>> quting
             }
             else {
                 const values = picker.getValues();

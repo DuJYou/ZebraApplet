@@ -2,17 +2,9 @@ import { VantComponent } from '../common/component';
 VantComponent({
     props: {
         info: null,
-<<<<<<< HEAD
         name: null,
         icon: String,
         dot: Boolean
-=======
-        icon: String,
-        dot: Boolean,
-        name: {
-            type: [String, Number]
-        }
->>>>>>> quting
     },
     relation: {
         name: 'tabbar',

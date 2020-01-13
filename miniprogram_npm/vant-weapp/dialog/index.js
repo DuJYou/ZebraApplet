@@ -1,11 +1,8 @@
 import { VantComponent } from '../common/component';
 import { button } from '../mixins/button';
 import { openType } from '../mixins/open-type';
-<<<<<<< HEAD
 import { addUnit } from '../common/utils';
 import { GRAY, BLUE } from '../common/color';
-=======
->>>>>>> quting
 VantComponent({
     mixins: [button, openType],
     props: {
@@ -17,7 +14,6 @@ VantComponent({
         customStyle: String,
         asyncClose: Boolean,
         messageAlign: String,
-<<<<<<< HEAD
         overlayStyle: String,
         useTitleSlot: Boolean,
         showCancelButton: Boolean,
@@ -27,11 +23,6 @@ VantComponent({
             type: null,
             observer: 'setWidthWithUnit'
         },
-=======
-        showCancelButton: Boolean,
-        closeOnClickOverlay: Boolean,
-        confirmButtonOpenType: String,
->>>>>>> quting
         zIndex: {
             type: Number,
             value: 2000
@@ -44,7 +35,6 @@ VantComponent({
             type: String,
             value: '取消'
         },
-<<<<<<< HEAD
         confirmButtonColor: {
             type: String,
             value: BLUE
@@ -53,8 +43,6 @@ VantComponent({
             type: String,
             value: GRAY
         },
-=======
->>>>>>> quting
         showConfirmButton: {
             type: Boolean,
             value: true
@@ -91,31 +79,19 @@ VantComponent({
         },
         handleAction(action) {
             if (this.data.asyncClose) {
-<<<<<<< HEAD
                 this.setData({
-=======
-                this.set({
->>>>>>> quting
                     [`loading.${action}`]: true
                 });
             }
             this.onClose(action);
         },
         close() {
-<<<<<<< HEAD
             this.setData({
-=======
-            this.set({
->>>>>>> quting
                 show: false
             });
         },
         stopLoading() {
-<<<<<<< HEAD
             this.setData({
-=======
-            this.set({
->>>>>>> quting
                 loading: {
                     confirm: false,
                     cancel: false
@@ -133,14 +109,11 @@ VantComponent({
             if (callback) {
                 callback(this);
             }
-<<<<<<< HEAD
         },
         setWidthWithUnit(val) {
             this.setData({
                 widthWithUnit: addUnit(val)
             });
-=======
->>>>>>> quting
         }
     }
 });

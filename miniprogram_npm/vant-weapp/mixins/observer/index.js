@@ -1,12 +1,6 @@
 import { behavior } from './behavior';
-<<<<<<< HEAD
 export function observe(vantOptions, options) {
     const { watch } = vantOptions;
-=======
-import { observeProps } from './props';
-export function observe(vantOptions, options) {
-    const { watch, computed } = vantOptions;
->>>>>>> quting
     options.behaviors.push(behavior);
     if (watch) {
         const props = options.properties || {};
@@ -22,14 +16,4 @@ export function observe(vantOptions, options) {
         });
         options.properties = props;
     }
-<<<<<<< HEAD
-=======
-    if (computed) {
-        options.methods = options.methods || {};
-        options.methods.$options = () => vantOptions;
-        if (options.properties) {
-            observeProps(options.properties);
-        }
-    }
->>>>>>> quting
 }

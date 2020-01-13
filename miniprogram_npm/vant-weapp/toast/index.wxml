@@ -1,13 +1,8 @@
 <van-overlay
   wx:if="{{ mask || forbidClick }}"
   show="{{ show }}"
-<<<<<<< HEAD
   z-index="{{ zIndex }}"
   custom-style="{{ mask ? '' : 'background-color: transparent;' }}"
-=======
-  mask="{{ mask }}"
-  z-index="{{ zIndex }}"
->>>>>>> quting
 />
 <van-transition
   show="{{ show }}"

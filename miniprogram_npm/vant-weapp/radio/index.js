@@ -1,8 +1,5 @@
 import { VantComponent } from '../common/component';
-<<<<<<< HEAD
 import { addUnit } from '../common/utils';
-=======
->>>>>>> quting
 VantComponent({
     field: true,
     relation: {
@@ -29,7 +26,6 @@ VantComponent({
         shape: {
             type: String,
             value: 'round'
-<<<<<<< HEAD
         },
         iconSize: {
             type: null,
@@ -45,11 +41,6 @@ VantComponent({
                 iconSizeWithUnit: addUnit(val)
             });
         },
-=======
-        }
-    },
-    methods: {
->>>>>>> quting
         emitChange(value) {
             const instance = this.parent || this;
             instance.$emit('input', value);

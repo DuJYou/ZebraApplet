@@ -1,5 +1,4 @@
 import { VantComponent } from '../common/component';
-<<<<<<< HEAD
 import { addUnit, isDef } from '../common/utils';
 const LONG_PRESS_START_TIME = 600;
 const LONG_PRESS_INTERVAL = 200;
@@ -11,20 +10,10 @@ function add(num1, num2) {
 VantComponent({
     field: true,
     classes: ['input-class', 'plus-class', 'minus-class'],
-=======
-VantComponent({
-    field: true,
-    classes: [
-        'input-class',
-        'plus-class',
-        'minus-class'
-    ],
->>>>>>> quting
     props: {
         value: null,
         integer: Boolean,
         disabled: Boolean,
-<<<<<<< HEAD
         inputWidth: null,
         buttonSize: null,
         asyncChange: Boolean,
@@ -33,11 +22,6 @@ VantComponent({
             type: Number,
             value: null
         },
-=======
-        inputWidth: String,
-        asyncChange: Boolean,
-        disableInput: Boolean,
->>>>>>> quting
         min: {
             type: null,
             value: 1
@@ -57,19 +41,6 @@ VantComponent({
         showMinus: {
             type: Boolean,
             value: true
-<<<<<<< HEAD
-=======
-        },
-        disablePlus: Boolean,
-        disableMinus: Boolean
-    },
-    computed: {
-        minusDisabled() {
-            return this.data.disabled || this.data.disableMinus || this.data.value <= this.data.min;
-        },
-        plusDisabled() {
-            return this.data.disabled || this.data.disablePlus || this.data.value >= this.data.max;
->>>>>>> quting
         }
     },
     watch: {
@@ -79,7 +50,6 @@ VantComponent({
             }
             const newValue = this.range(value);
             if (typeof newValue === 'number' && +this.data.value !== newValue) {
-<<<<<<< HEAD
                 this.setData({ value: newValue });
             }
         },
@@ -102,36 +72,15 @@ VantComponent({
     },
     created() {
         this.setData({
-=======
-                this.set({ value: newValue });
-            }
-        },
-        max: 'check',
-        min: 'check',
-    },
-    data: {
-        focus: false
-    },
-    created() {
-        this.set({
->>>>>>> quting
             value: this.range(this.data.value)
         });
     },
     methods: {
-<<<<<<< HEAD
         isDisabled(type) {
             if (type === 'plus') {
                 return this.data.disabled || this.data.value >= this.data.max;
             }
             return this.data.disabled || this.data.value <= this.data.min;
-=======
-        check() {
-            const newValue = this.range(this.data.value);
-            if (typeof newValue === 'number' && +this.data.value !== newValue) {
-                this.set({ value: newValue });
-            }
->>>>>>> quting
         },
         onFocus(event) {
             this.$emit('focus', event.detail);
@@ -144,7 +93,6 @@ VantComponent({
         // limit value range
         range(value) {
             value = String(value).replace(/[^0-9.-]/g, '');
-<<<<<<< HEAD
             // format range
             value = value === '' ? 0 : +value;
             value = Math.max(Math.min(this.data.max, value), this.data.min);
@@ -153,27 +101,18 @@ VantComponent({
                 value = value.toFixed(this.data.decimalLength);
             }
             return value;
-=======
-            return Math.max(Math.min(this.data.max, value), this.data.min);
->>>>>>> quting
         },
         onInput(event) {
             const { value = '' } = event.detail || {};
             this.triggerInput(value);
         },
-<<<<<<< HEAD
         onChange() {
             const { type } = this;
             if (this.isDisabled(type)) {
-=======
-        onChange(type) {
-            if (this.data[`${type}Disabled`]) {
->>>>>>> quting
                 this.$emit('overlimit', type);
                 return;
             }
             const diff = type === 'minus' ? -this.data.step : +this.data.step;
-<<<<<<< HEAD
             const value = add(+this.data.value, diff);
             this.triggerInput(this.range(value));
             this.$emit(type);
@@ -226,23 +165,6 @@ VantComponent({
                 style = `width: ${size};height: ${size};`;
             }
             return style;
-=======
-            const value = Math.round((+this.data.value + diff) * 100) / 100;
-            this.triggerInput(this.range(value));
-            this.$emit(type);
-        },
-        onMinus() {
-            this.onChange('minus');
-        },
-        onPlus() {
-            this.onChange('plus');
-        },
-        triggerInput(value) {
-            this.set({
-                value: this.data.asyncChange ? this.data.value : value
-            });
-            this.$emit('change', value);
->>>>>>> quting
         }
     }
 });

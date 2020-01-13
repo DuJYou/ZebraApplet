@@ -3,19 +3,11 @@ import { pickerProps } from '../picker/shared';
 const COLUMNSPLACEHOLDERCODE = '000000';
 VantComponent({
     classes: ['active-class', 'toolbar-class', 'column-class'],
-<<<<<<< HEAD
     props: Object.assign(Object.assign({}, pickerProps), { value: String, areaList: {
             type: Object,
             value: {}
         }, columnsNum: {
             type: null,
-=======
-    props: Object.assign({}, pickerProps, { value: String, areaList: {
-            type: Object,
-            value: {}
-        }, columnsNum: {
-            type: [String, Number],
->>>>>>> quting
             value: 3
         }, columnsPlaceholder: {
             type: Array,
@@ -41,11 +33,7 @@ VantComponent({
         },
         areaList: 'setValues',
         columnsNum(value) {
-<<<<<<< HEAD
             this.setData({
-=======
-            this.set({
->>>>>>> quting
                 displayColumns: this.data.columns.slice(0, +value)
             });
         }
@@ -94,19 +82,10 @@ VantComponent({
         onChange(event) {
             const { index, picker, value } = event.detail;
             this.code = value[index].code;
-<<<<<<< HEAD
             this.setValues().then(() => {
                 this.$emit('change', {
                     picker,
                     values: this.parseOutputValues(picker.getValues()),
-=======
-            let getValues = picker.getValues();
-            getValues = this.parseOutputValues(getValues);
-            this.setValues().then(() => {
-                this.$emit('change', {
-                    picker,
-                    values: getValues,
->>>>>>> quting
                     index
                 });
             });
@@ -223,13 +202,8 @@ VantComponent({
             }
             return area;
         },
-<<<<<<< HEAD
         reset(code) {
             this.code = code || '';
-=======
-        reset() {
-            this.code = '';
->>>>>>> quting
             return this.setValues();
         }
     }

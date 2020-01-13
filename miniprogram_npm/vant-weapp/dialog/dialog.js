@@ -4,22 +4,14 @@ function getContext() {
     return pages[pages.length - 1];
 }
 const Dialog = options => {
-<<<<<<< HEAD
     options = Object.assign(Object.assign({}, Dialog.currentOptions), options);
-=======
-    options = Object.assign({}, Dialog.currentOptions, options);
->>>>>>> quting
     return new Promise((resolve, reject) => {
         const context = options.context || getContext();
         const dialog = context.selectComponent(options.selector);
         delete options.context;
         delete options.selector;
         if (dialog) {
-<<<<<<< HEAD
             dialog.setData(Object.assign({ onCancel: reject, onConfirm: resolve }, options));
-=======
-            dialog.set(Object.assign({ onCancel: reject, onConfirm: resolve }, options));
->>>>>>> quting
             queue.push(dialog);
         }
         else {
@@ -30,7 +22,6 @@ const Dialog = options => {
 Dialog.defaultOptions = {
     show: true,
     title: '',
-<<<<<<< HEAD
     width: null,
     message: '',
     zIndex: 100,
@@ -42,17 +33,6 @@ Dialog.defaultOptions = {
     customStyle: '',
     messageAlign: '',
     overlayStyle: '',
-=======
-    message: '',
-    zIndex: 100,
-    overlay: true,
-    className: '',
-    customStyle: '',
-    asyncClose: false,
-    messageAlign: '',
-    transition: 'scale',
-    selector: '#van-dialog',
->>>>>>> quting
     confirmButtonText: '确认',
     cancelButtonText: '取消',
     showConfirmButton: true,

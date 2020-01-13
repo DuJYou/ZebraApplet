@@ -1,11 +1,7 @@
 <van-transition
   show="{{ show }}"
   custom-class="van-overlay"
-<<<<<<< HEAD
   custom-style="z-index: {{ zIndex }}; {{ customStyle }}"
-=======
-  custom-style="z-index: {{ zIndex }}; {{ mask ? 'background-color: rgba(0, 0, 0, .7);' : '' }}; {{ customStyle }}"
->>>>>>> quting
   duration="{{ duration }}"
   bind:tap="onClick"
   catch:touchmove="noop"

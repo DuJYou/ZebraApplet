@@ -1,7 +1,4 @@
 {
-<<<<<<< HEAD
-  "usingComponents": {}
-=======
 
   "component": true,
   "usingComponents": {
@@ -11,5 +8,4 @@
     "van-nav-bar": "../../miniprogram_npm/vant-weapp/nav-bar/index",
     "van-popup": "../../miniprogram_npm/vant-weapp/popup/index"
   }
->>>>>>> quting
 }

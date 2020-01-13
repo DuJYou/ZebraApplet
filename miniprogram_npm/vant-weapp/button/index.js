@@ -4,17 +4,11 @@ import { openType } from '../mixins/open-type';
 VantComponent({
     mixins: [button, openType],
     classes: ['hover-class', 'loading-class'],
-<<<<<<< HEAD
     data: {
         style: ''
     },
     props: {
         icon: String,
-=======
-    props: {
-        icon: String,
-        color: String,
->>>>>>> quting
         plain: Boolean,
         block: Boolean,
         round: Boolean,
@@ -23,14 +17,11 @@ VantComponent({
         hairline: Boolean,
         disabled: Boolean,
         loadingText: String,
-<<<<<<< HEAD
         customStyle: String,
         loadingType: {
             type: String,
             value: 'circular'
         },
-=======
->>>>>>> quting
         type: {
             type: String,
             value: 'default'
@@ -42,7 +33,6 @@ VantComponent({
         loadingSize: {
             type: String,
             value: '20px'
-<<<<<<< HEAD
         },
         color: {
             type: String,
@@ -66,8 +56,6 @@ VantComponent({
                     this.setData({ style });
                 }
             }
-=======
->>>>>>> quting
         }
     },
     methods: {

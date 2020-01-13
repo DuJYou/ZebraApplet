@@ -5,8 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-<<<<<<< HEAD
-=======
     titleList: [],
     titleid: 0,
     list: [],
@@ -90,7 +88,6 @@ Page({
         }
       }
     })
->>>>>>> quting
 
   },
 
@@ -98,9 +95,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-<<<<<<< HEAD
-
-=======
     // 初始页面数据获取
     wx.request({
       url: 'https://m.bmtrip.com/api/v3/article/list?sort_id=0&page=1',
@@ -126,7 +120,6 @@ Page({
     })
 
     this.ajaxRequset()
->>>>>>> quting
   },
 
   /**
@@ -161,10 +154,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-<<<<<<< HEAD
-
-=======
->>>>>>> quting
   },
 
   /**

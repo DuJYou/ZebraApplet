@@ -18,7 +18,7 @@ Page({
   onClickDestinationList(){
     console.log(1);
     
-    wx.wx.switchTab({
+    wx.switchTab({
       url: '/pages/detail/detail',
       success: (result)=>{
         
@@ -31,7 +31,7 @@ Page({
   onClickTltleSite(){
     // console.log(1);
     
-    // wx.wx.switchTab({
+    //wx.switchTab({
     //   url: '',
     //   success: (result)=>{
         

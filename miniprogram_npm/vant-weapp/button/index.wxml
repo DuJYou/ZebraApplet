@@ -3,17 +3,10 @@
 <button
   id="{{ id }}"
   class="custom-class {{ utils.bem('button', [type, size, { block, round, plain, square, loading, disabled, hairline, unclickable: disabled || loading }]) }} {{ hairline ? 'van-hairline--surround' : '' }}"
-<<<<<<< HEAD
   hover-class="van-button--active hover-class"
   lang="{{ lang }}"
   style="{{ style }} {{ customStyle }}"
   open-type="{{ openType }}"
-=======
-  open-type="{{ openType }}"
-  hover-class="van-button--active hover-class"
-  style="{{ color ? 'border-color: ' + color + ';' + (plain ? 'color: ' + color : 'color: #fff; background-color: ' + color) : '' }}"
-  lang="{{ lang }}"
->>>>>>> quting
   business-id="{{ businessId }}"
   session-from="{{ sessionFrom }}"
   send-message-title="{{ sendMessageTitle }}"
@@ -34,12 +27,8 @@
     <van-loading
       custom-class="loading-class"
       size="{{ loadingSize }}"
-<<<<<<< HEAD
       type="{{ loadingType }}"
       color="{{ type === 'default' ? '#c9c9c9' : 'white' }}"
-=======
-      color="{{ type === 'default' ? '#c9c9c9' : '' }}"
->>>>>>> quting
     />
     <view
       wx:if="{{ loadingText }}"

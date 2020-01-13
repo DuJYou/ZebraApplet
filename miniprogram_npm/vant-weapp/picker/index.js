@@ -2,18 +2,12 @@ import { VantComponent } from '../common/component';
 import { pickerProps } from './shared';
 VantComponent({
     classes: ['active-class', 'toolbar-class', 'column-class'],
-<<<<<<< HEAD
     props: Object.assign(Object.assign({}, pickerProps), { valueKey: {
             type: String,
             value: 'text'
         }, toolbarPosition: {
             type: String,
             value: 'top'
-=======
-    props: Object.assign({}, pickerProps, { valueKey: {
-            type: String,
-            value: 'text'
->>>>>>> quting
         }, defaultIndex: {
             type: Number,
             value: 0

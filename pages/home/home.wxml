@@ -1,5 +1,4 @@
 <!--pages/home/home.wxml-->
-<<<<<<< HEAD
 <view class="app">
 	<view class="cms-home-header">
 		<view class="bm-searchbar">
@@ -1161,14 +1160,3 @@
 		</view>
 	</view>
 </view>
-=======
-<view >
-  <view class="cms-home-header">
-    <view class="bm-searchbar">
-      <!-- <image src="/image/erji.png"></image> -->
-      <view class="bm-searchbar-title">首页</view>
-      <!-- <image src="/image/ss.png"></image> -->
-    </view>
-  </view>
-</view>
->>>>>>> quting

@@ -1,8 +1,5 @@
 import { VantComponent } from '../common/component';
-<<<<<<< HEAD
 import { BLUE, GRAY_DARK } from '../common/color';
-=======
->>>>>>> quting
 VantComponent({
     field: true,
     classes: ['node-class'],
@@ -27,7 +24,6 @@ VantComponent({
     },
     watch: {
         checked(value) {
-<<<<<<< HEAD
             const loadingColor = this.getLoadingColor(value);
             this.setData({ value, loadingColor });
         }
@@ -42,15 +38,6 @@ VantComponent({
             const { activeColor, inactiveColor } = this.data;
             return checked ? activeColor || BLUE : inactiveColor || GRAY_DARK;
         },
-=======
-            this.set({ value });
-        }
-    },
-    created() {
-        this.set({ value: this.data.checked });
-    },
-    methods: {
->>>>>>> quting
         onClick() {
             const { activeValue, inactiveValue } = this.data;
             if (!this.data.disabled && !this.data.loading) {

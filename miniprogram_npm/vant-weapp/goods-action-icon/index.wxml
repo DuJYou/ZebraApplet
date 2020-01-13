@@ -22,27 +22,17 @@
   bindgetphonenumber="bindGetPhoneNumber"
   bindlaunchapp="bindLaunchApp"
 >
-<<<<<<< HEAD
   <view class="van-goods-action-icon__content">
     <van-icon
       wx:if="{{ icon }}"
       size="20px"
       name="{{ icon }}"
       dot="{{ dot }}"
-=======
-  <view class="van-goods-action-icon__content van-hairline--right">
-    <van-icon
-      size="20px"
-      name="{{ icon }}"
->>>>>>> quting
       info="{{ info }}"
       class="van-goods-action-icon__icon"
       custom-class="icon-class"
     />
-<<<<<<< HEAD
     <slot name="icon" />
-=======
->>>>>>> quting
     <text class="text-class">{{ text }}</text>
   </view>
 </van-button>

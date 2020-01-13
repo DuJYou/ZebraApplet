@@ -1,11 +1,5 @@
 import { VantComponent } from '../common/component';
-<<<<<<< HEAD
 VantComponent({
-=======
-import { safeArea } from '../mixins/safe-area';
-VantComponent({
-    mixins: [safeArea({ safeAreaInsetTop: true })],
->>>>>>> quting
     classes: ['title-class'],
     props: {
         title: String,
@@ -19,7 +13,6 @@ VantComponent({
         },
         zIndex: {
             type: Number,
-<<<<<<< HEAD
             value: 1
         },
         safeAreaInsetTop: {
@@ -33,10 +26,6 @@ VantComponent({
     created() {
         const { statusBarHeight } = wx.getSystemInfoSync();
         this.setData({ statusBarHeight });
-=======
-            value: 120
-        }
->>>>>>> quting
     },
     methods: {
         onClickLeft() {

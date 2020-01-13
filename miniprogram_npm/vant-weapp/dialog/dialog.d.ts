@@ -4,10 +4,7 @@ declare type DialogOptions = {
     lang?: string;
     show?: boolean;
     title?: string;
-<<<<<<< HEAD
     width?: string | number;
-=======
->>>>>>> quting
     zIndex?: number;
     context?: WechatMiniprogram.Page.TrivialInstance | WechatMiniprogram.Component.TrivialInstance;
     message?: string;
@@ -20,10 +17,7 @@ declare type DialogOptions = {
     asyncClose?: boolean;
     businessId?: number;
     sessionFrom?: string;
-<<<<<<< HEAD
     overlayStyle?: string;
-=======
->>>>>>> quting
     appParameter?: string;
     messageAlign?: string;
     sendMessageImg?: string;
