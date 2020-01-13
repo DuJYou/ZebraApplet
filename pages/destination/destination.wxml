@@ -1,2 +1,42 @@
+<<<<<<< HEAD
 <!--pages/destination/destination.wxml-->
 <text>pages/destination/destination.wxml</text>
+=======
+<!-- pages/destination/destination.wxml -->
+<view class="box">
+  <van-tree-select items="{{ items }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ itemslist.id }}" bind:click-nav="onClickNav" bind:click-item="onClickItem">
+  
+    <view slot="content">
+    <scroll-view scroll-y="true" style="height: 750px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view class="destinationList" >
+        <view class="destination" bindtap="onClickDestinationList" wx:for="{{destinationList[mainActiveIndex].id}}" wx:if="{{kg==='false'?index<4:index<99}}" id="{{item.id}}" wx:key="{{item.index+item.id}}">
+          <cover-image class="destinationImg" src="{{item.img}}" />
+          <view class="shade"></view>
+          <view class="info-text">
+            <view class="textBox">
+              <text style="font-size:9px">{{item.name_en}}</text>
+              <text style="font-size:16px">{{item.label}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <button class="more" type="button" bindtap="onClickMore" data-text="更多的目的地">
+       {{text}}
+        
+      </button>
+      <view>
+        <text class="tltleSite">推荐地点</text>
+        <view class="tltleSiteList" bindtap="onClickTltleSite" wx:for="{{tltleSite[mainActiveIndex].id}}" wx:key="{{item.index+item.id}}" id="{{item.id}}">
+          <cover-image class="recommendImg" src="{{item.img}}" />
+          <text class="recBrief">{{item.title}}</text>
+          <view class="feature">
+            <text>{{item.subtitle}}</text>
+          </view>
+          <text class="price">￥{{item.price}}起/{{item.unit}}</text>
+        </view>
+      </view>
+    </scroll-view>
+    </view>
+  </van-tree-select>
+</view>
+>>>>>>> Duke
