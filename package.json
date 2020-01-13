@@ -1,0 +1,12 @@
+{
+  "name": "ZebraApplet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DuJYou/ZebraApplet.git",
+  "author": "QuTHappy <qt19972010@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vant-weapp": "^0.5.27",
+    "weui-miniprogram": "^0.2.1"
+  }
+}

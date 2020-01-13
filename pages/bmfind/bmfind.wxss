@@ -1,0 +1,158 @@
+page {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.loading {
+  /* width:100%; */
+  text-align: center;
+}
+
+.loading image {
+  width: 20px;
+  height: 20px;
+}
+
+.nomore {
+  text-align: center;
+  font-size: 12px;
+}
+
+.findCon {
+  /* position: relative; */
+  overflow: hidden;
+  min-height: 100%;
+  max-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topBox {
+  height: 88px;
+}
+
+.content {
+  flex: 1;
+  /* overflow-y: scroll; *//* overflow-x: hidden; */
+  width: 100%;
+  /* padding: 0px 18px 0; */
+  padding-top: 16px;
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.space100 {
+  height: 100px;
+}
+
+.titleBox {
+  width: calc(100%-18px);
+  height: 44px;
+  background: white;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  font-family: PingFangSC-Medium;
+  font-size: 15px;
+  color: #333;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  /* position: sticky; *//* top: 100; *//* left: 0; */
+  z-index: 99;
+}
+
+.popupTitle {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 44px;
+  align-items: center;
+  border: 1px solid #eee;
+}
+
+.closeIcon {
+  position: absolute;
+  /* width: 15px; *//* height: 15px; *//* background: #fa3; */
+  right: 15px;
+  top: 15px;
+  /* border: 1px solid #eee */
+}
+
+.closeIcon image {
+  width: 16px;
+  height: 16px;
+}
+
+.phone1, .phone2 {
+  display: flex;
+  padding: 18px 18px 0;
+  justify-content: space-between;
+  font-family: PingFangSC-Medium;
+  font-size: 13px;
+  color: #333;
+  letter-spacing: 0.02133rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.phone2{
+  padding-top: 0
+}
+
+.p1R {
+  height: auto;
+}
+
+.phone1 image,.phone2 image {
+  width: 38px;
+  height: 38px;
+}
+
+.space44 {
+  height: 44px;
+}
+
+.navBox {
+  flex: 1;
+}
+
+.search image, .contact image {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+}
+
+/* .navBar{
+  width:calc(100%-12px);
+  height:45px;
+  background:#fa3;
+  padding: 0 6px;
+} */
+
+/* .navBar swiper-item {
+  padding: 0 17px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  height: 100%;
+  line-height: 45px;
+  /* width:auto!important; */
+
+/* max-width: 54px !important;
+  text-align: center; */
+
+/* } */
+
+/* .contentBox {
+  width: 100%;
+  background: #fa3;
+} */
+
+.conBox {
+  width: calc(100%-36px);
+  padding: 16px 18px 0;
+  /* position: relative; */
+}

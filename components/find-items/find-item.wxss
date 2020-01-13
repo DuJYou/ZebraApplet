@@ -1,0 +1,64 @@
+/* components/find-items/find-item.wxss */
+
+.find-itemBox {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.imageBox {
+  width: 100%;
+  text-align: center;
+  position: relative
+}
+
+.tipTitle {
+  position: absolute;
+  top: 10px;
+  right: 28px;
+  opacity: 0.8;
+  padding: 2Px 6Px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.findImg {
+  width: 340px;
+  height: 190px;
+  background: #eee;
+}
+
+.find-itemBox text {
+  text-align: center;
+}
+
+.find-itemBox .findtitle {
+  /* width: 100%; */
+  padding: 0 18px;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+  letter-spacing: 0.1px;
+  margin: 12px 0 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.find-itemBox .findsubtitle {
+  /* width: 100%; */
+  padding: 0 18px;
+  font-family: PingFangSC-Light;
+  font-size: 11px;
+  color: #333;
+  letter-spacing: 0.004rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
