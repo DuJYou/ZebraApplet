@@ -6,6 +6,7 @@
     "pages/login/login",
     "pages/feedback/feedback",
     "pages/settings/settings",
+    "pages/detail/detail",
     "pages/home/home",
     "pages/product/product",
     "pages/bmfind/bmfind"

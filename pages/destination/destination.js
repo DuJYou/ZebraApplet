@@ -16,16 +16,16 @@ Page({
   },
   //点击目的地进入详情页
   onClickDestinationList(){
-    // console.log(1);
+    console.log(1);
     
-    // wx.wx.switchTab({
-    //   url: '',
-    //   success: (result)=>{
+    wx.wx.switchTab({
+      url: '/pages/detail/detail',
+      success: (result)=>{
         
-    //   },
-    //   fail: ()=>{},
-    //   complete: ()=>{}
-    // });
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
   },
   //点击推荐进入详情页
   onClickTltleSite(){
