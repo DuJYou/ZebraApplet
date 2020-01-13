@@ -1,7 +1,4 @@
 {
-<<<<<<< HEAD
-  "usingComponents": {}
-=======
   "usingComponents": {
     "van-sidebar": "../../miniprogram_npm/vant-weapp/sidebar/index",
     "van-sidebar-item": "../../miniprogram_npm/vant-weapp/sidebar-item/index",
@@ -9,5 +6,4 @@
     "van-collapse-item": "../../miniprogram_npm/vant-weapp/collapse-item/index",
     "van-tree-select": "../../miniprogram_npm/vant-weapp/tree-select/index"
   }
->>>>>>> Duke
 }

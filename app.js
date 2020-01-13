@@ -1,10 +1,7 @@
   //app.js
 App({
-<<<<<<< HEAD
-=======
 
 
->>>>>>> Duke
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -40,8 +37,6 @@ App({
   },
   globalData: {
     userInfo: null
-<<<<<<< HEAD
-=======
   },
   onShow: function (){
     wx.getSetting({
@@ -69,6 +64,5 @@ App({
       }
     })
 
->>>>>>> Duke
   }
 })
