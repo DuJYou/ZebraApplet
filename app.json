@@ -4,7 +4,8 @@
     "pages/destination/destination",
     "pages/product/product",
     "pages/bmfind/bmfind",
-    "pages/personal/personal"
+    "pages/personal/personal",
+    "pages/detail/detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
