@@ -1,0 +1,4 @@
+<!--component/tab/tab.wxml-->
+<van-tabs active="{{ active }}" line-height="{{1}}" line-width="{{26}}" border="{{false}}" duration="{{0}}" lazy-render="{{false}}" bind:click="clickType">
+  <van-tab title="{{item.title}}"  wx:for="{{titleList}}" type="{{item.type}}"></van-tab>
+</van-tabs>

@@ -1,0 +1,15 @@
+<!--component/product/private/private.wxml-->
+<view class="privateView">
+    <view class="priveViewOne" bindtap="MudidiClick">
+           <view class="priveViewFont">目的地(必填)</view>
+           <image class="xialaimage" src="../../../image/xiala.png"></image>
+    </view>
+    <view class="priveViewOne" bindtap="DataClick">
+           <view class="priveViewFont" >预计出游时间(非必填)</view>
+           <image class="xialaimage" src="../../../image/xiala.png"></image>
+    </view>
+    <view class="priveViewOne">
+            <input type="text" placeholder="您的姓名(非必填)" class="priveViewFont" placeholder-class="priveViewplaceholderFont"/>
+    </view>
+    <view class="Huoqubutton">免费获取方案</view>
+</view>

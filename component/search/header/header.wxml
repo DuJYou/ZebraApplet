@@ -1,0 +1,10 @@
+<!--component/header/header.wxml-->
+
+    <view class="SearchHeader">
+        <view class="SearchHeaderWrap">
+              <mp-icon type="outline"  icon="search" color="#BEBEBE" size="{{18}}"></mp-icon>
+              <input value="{{keyword}}" bindconfirm="searchConfirm"  placeholder="请输入" placeholder-class="placeholderSearchFont" type="text" class="searchInput"/>
+        </view>
+        <view class="SearchFont">取消</view>
+    </view>
+

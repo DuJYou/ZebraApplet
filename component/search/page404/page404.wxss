@@ -1,0 +1,20 @@
+/* component/search/page404/page404.wxss */
+.page404{
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imageView{
+    width: 128px;
+    height: 128px;
+    margin-top:70px ;
+}
+.FontView{
+    font-family: PingFangSC-Light;
+    font-size: 16px;
+    color: #898989;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 300;
+}

@@ -1,0 +1,5 @@
+<!--pages/index/index.wxml-->
+<view class="searchMain">
+  <header-search></header-search>
+  <search-history></search-history>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/product/product.wxml-->
+<view class="imageWrap" >
+    <image wx:if="{{click===0}}" src="https://product-ssl-qiniu.bmtrip.com/20191226_banner_01.png" alt=""/>
+    <image wx:if="{{click===1}}" src="https://product-ssl-qiniu.bmtrip.com/20191226_banner_02.png" alt=""/>
+    <view class="TabBotton">
+        <view class="TabBottonView" bindtap="private" style="background:{{click===0?'#fff':'rgba(0, 0, 0, 0.6)'}};color:{{click===0?'#C14374':'#fff'}}">私人订制</view>
+        <view class="TabBottonView" bindtap="enterprise" style="background:{{click===1?'#fff':'rgba(0, 0, 0, 0.6)'}};color:{{click===1?'#C14374':'#fff'}}">企业定制</view>
+    </view>
+</view>
+<private wx:if="{{click===0}}" bind:MudidiClick="MudidiClick" bind:DataClick="DataClick"></private>
+<enterprise wx:if="{{click===1}}" bind:MudidiClick="MudidiClick" bind:DataClick="DataClick"></enterprise>
+
+<van-popup
+  show="{{ Mudidi }}"
+  position="bottom"
+  custom-style="height: 60%;"
+  bind:close="onClose"
+>
+</van-popup>
+
+<van-popup
+  show="{{ data }}"
+  position="bottom"
+  custom-style="height: 60%;"
+  bind:close="onClose"
+>
+</van-popup>

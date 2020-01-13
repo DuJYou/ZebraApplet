@@ -1,0 +1,28 @@
+/* component/search/searchMain/searchMain.wxss */
+.SearchTabCase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    line-height: 42px;
+}
+.SearchTabFontWrap{
+    display: flex;
+    height: 100%;
+    text-align: center;
+    margin:0px 30px;
+}
+.SearchTabFontImage{
+    width: 8px;
+    height: 8px;
+}
+.SearchTabFont{
+    font-size: 12px;
+    color: #333;
+}
+.SearchTabFontImageWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 42px;
+}

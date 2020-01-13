@@ -1,0 +1,22 @@
+
+<view class="ListMiage" wx:for="{{list}}">
+    <view class="ListMiageWrap">
+        <image class="ListMiageImage" src="{{item.img}}">
+        </image>
+    </view>
+        <view class="searchMainTitle">
+            {{item.title}}
+        </view>
+        <view class="searchMainFont">
+            {{item.subtitle}}
+        </view>
+    <view class="SearchWrap">
+        <view class="SearchUl">
+            <view class="SearchLi" wx:for="{{item.mark}}">{{item.name}}</view>
+        </view>
+        <view class="SearchPrice">
+            ￥{{item.price}}/{{item.unit}}
+        </view>
+    </view>
+<view class="PostionView">{{item.tip_mark}}</view>
+</view>

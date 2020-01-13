@@ -1,0 +1,23 @@
+/* component/search/hotSearch/hotSearcch.wxss */
+.searchHistoryWrap{
+    margin-top:40rpx;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    font-size: 24rpx;
+}
+.searchHistoryTabWrap{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40rpx 20rpx;
+}
+.searchHistoryTab{
+    width: 27%;
+    text-align: center;
+    padding: 16rpx 10rpx;
+    background-color: #F6F6F6;
+    color:#333;
+    margin: 10rpx;
+    font-size: 22rpx;
+}
