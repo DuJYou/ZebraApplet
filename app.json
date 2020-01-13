@@ -10,6 +10,7 @@
     "pages/home/home",
     "pages/product/product",
     "pages/bmfind/bmfind",
+    "pages/search/searchMain/searchMain",
     "components/find-items/find-item",
     "pages/findDetail/findDetail"
   ],

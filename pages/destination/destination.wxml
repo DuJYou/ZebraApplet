@@ -5,7 +5,7 @@
     <view slot="content">
     <scroll-view scroll-y="true" style="height: 750px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
       <view class="destinationList" >
-        <view class="destination" bindtap="onClickDestinationList" wx:for="{{destinationList[mainActiveIndex].id}}" wx:if="{{kg==='false'?index<4:index<99}}" id="{{item.id}}" wx:key="{{item.index+item.id}}">
+        <view class="destination" bindtap="onClickDestinationList" wx:for="{{destinationList[mainActiveIndex].id}}" wx:if="{{kg==='false'?index<4:index<99}}" id="{{item.id}}" keyword="{{item.name_en}}" wx:key="{{item.index+item.id}}">
           <cover-image class="destinationImg" src="{{item.img}}" />
           <view class="shade"></view>
           <view class="info-text">

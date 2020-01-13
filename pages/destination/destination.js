@@ -17,10 +17,10 @@ Page({
   //点击目的地进入详情页
   onClickDestinationList(  detail = {}){
     console.log(detail);
-    let id=detail.currentTarget.id
-    console.log(id);
+    // let id=detail.currentTarget.id
+    console.log(detail);
     wx.navigateTo({
-      url: `/pages/detail/detail?id=${detail.currentTarget.id}`,
+      // url: `/pages/search/searchMain/searchMain?keyword=${detail.currentTarget.id}`,
       success: (result)=>{
       },
       fail: ()=>{},
@@ -33,10 +33,11 @@ Page({
   },
   //点击推荐进入详情页
   onClickTltleSite( detail = {}){
-    console.log(1,detail);
+    console.log(1,detail.currentTarget.id);
     // console.log(1);
+    // let product_id=detail.currentTarget.id
     wx.navigateTo({
-      url: `/pages/detail/detail?id=${detail.currentTarget.id}`,
+      url: `/pages/detail/detail?product_id=${detail.currentTarget.id}`,
       success: (result)=>{
       },
       fail: ()=>{},
