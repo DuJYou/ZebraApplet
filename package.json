@@ -1,5 +1,31 @@
 {
+<<<<<<< HEAD
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "@vant/weapp": "^1.0.3"
+  },
+  "name": "applet",
+  "description": "首页   黄余   \r 详情页  许明肇   \r 发现 + 发现详情   曲婷   \r 目的地+我的 + 立即定制  杜家有   \r 搜索+定制游  李明宇   \r ###\r node 12.12.0",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuJYou/applet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuJYou/applet/issues"
+  },
+  "homepage": "https://github.com/DuJYou/applet#readme"
+=======
   "dependencies": {
     "vant-weapp": "^1.0.0-beta.4"
   }
+>>>>>>> e0e300a9d6485b7cc4c3550f58ae261432d93c99
 }

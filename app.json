@@ -5,6 +5,10 @@
     "pages/destination/destination",
     "pages/product/product",
     "pages/bmfind/bmfind",
+<<<<<<< HEAD
+    "pages/personal/personal",
+    "pages/detail/detail"
+=======
     "pages/personal/personal"
 =======
  
@@ -19,6 +23,7 @@
     "pages/product/product",
     "pages/bmfind/bmfind"
 >>>>>>> Duke
+>>>>>>> e0e300a9d6485b7cc4c3550f58ae261432d93c99
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

@@ -1,0 +1,289 @@
+.detail-container {
+  background: #f7f5f5;
+  /* overflow-y: scroll; */
+  font-size: 12.8px;
+  color: #333;
+}
+
+.product-num {
+    padding: 0 5.12px;
+    opacity: 0.5;
+    background: #000000;
+    border-radius: 5.55px;
+    font-size: 10px;
+    position: absolute;
+    right: 15.36px;
+    bottom: 15.36px;
+    color: #fff;
+    z-index: 9;
+}
+
+.product-swiper {
+  position:relative;
+}
+
+.my-swiper {
+  background: #eee;
+  height: 62vw;
+}
+
+.product-item-title-sticky {
+  position: sticky;
+  top:0;
+}
+
+.product-detail {
+  padding: 10.24px 15.36px 15.36px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-detail >text {
+  font-family: PingFangSC-Medium;
+}
+
+.product-detail .bm-product-item-title {
+  letter-spacing: 0;
+  font-weight: 500;
+  margin-bottom: 5.12px;
+}
+
+.product-detail .bm-product-item-subtitle {
+  font-family: PingFangSC-Light;
+  font-size: 12px;
+  color: #898989;
+  letter-spacing: 0.128px;
+  margin-bottom: 7.68px;
+}
+
+.product-detail .bm-product-detail-price {
+  font-size: 15.36px;
+  color: #c04374;
+  letter-spacing: 0.68256px;
+  white-space: nowrap;
+  height: 48rpx;
+  line-height: 20rpx;
+}
+
+.product-detail .bm-product-item-tags {
+  margin-bottom: 7.68px;
+}
+
+.product-detail .bm-product-item-tags .bm-product-item-tag {
+  margin-right: 7.68px;
+}
+
+.saleoff {
+  background: #fff;
+  text-align: left;
+  margin: 7.68px 0;
+  padding: 12.8px 15.36px;
+  display: flex;
+  align-items: center;
+}
+
+.saleoff  .saleoff__txt {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 7.68px;
+  overflow-x: scroll;
+}
+
+.saleoff__coupon {
+  box-sizing: border-box;
+  background: rgba(255, 142, 0, 0.2);
+  padding: 3.4px 10.24px 4.267px;
+  opacity: 0.9;
+  font-family: PingFangSC-Medium;
+  font-size: 12px;
+  color: #ff8e00;
+  letter-spacing: 0;
+  border-radius: 2.56px;
+  position: relative;
+  display: inline-block;
+  margin-right: 5.12px;
+}
+
+.saleoff__coupon::after, .saleoff__coupon::before {
+  content: '';
+  height: 4px;
+  width: 4px;
+  background: white;
+  position: absolute;
+  top: calc(50% - 2px);
+}
+
+.saleoff__coupon::after {
+  right: -2px;
+}
+
+.saleoff__coupon::before {
+  left: -2px;
+}
+
+.comment {
+  background: #fff;
+  margin-top: 7.68px;
+  font-size: 12px;
+}
+
+.comment .comment_title {
+  padding: 10.24px 15.36px 0;
+}
+
+.comment .comment_title,.evaluate .evaluate_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comment_title .comment_score {
+  color: #f90;
+  letter-spacing: 0.768px;
+  line-height: 20.48px;
+}
+
+.comment .evaluate {
+  padding: 15.36px;
+  padding-bottom: 7.68px;
+  text-align: left;
+}
+
+.evaluate .evaluate_time {
+  color: #898989;
+}
+
+.evaluate .evaluate_star_score {
+  margin: 12.8px 0 10.24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.evaluate .evaluate_star_score .evaluate_star_score_item {
+  width: 50%;
+  color: #898989;
+}
+
+.evaluate .evaluate_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cities_title {
+  margin: 7.68px 0;
+  padding: 10.24px 15.36px;
+  background: #fff;
+  font-size: 12px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab-item {
+  padding: 20.47px 15.36px 28px;
+  background: #fff;
+}
+
+.highfeature_items {
+  width: 100%;
+  padding-bottom: 30.72px;
+  margin-bottom: 30.72px;
+  position:relative;
+}
+
+.highfeature_items::after {
+  content: '';
+  background: #f7f5f5;
+  width: 100vw;
+  height: 1px;
+  position: absolute;
+  left: -15.36px;
+  bottom: 0;
+}
+
+.highfeature_item {
+  margin-bottom: 30.72px;
+}
+
+.highfeature_item image {
+  width: 100%;
+}
+
+.highfeature_tag {
+  margin: 7.68px 0;
+}
+
+.high-feature__title {
+    font-size: 12px;
+    margin-bottom: 5.12px;
+}
+
+.high-feature__content {
+    font-family: PingFangSC-Light;
+    font-size: 12px;
+    color: #898989;
+}
+
+.highfeature_item:last-child {
+  margin-bottom: 0;
+}
+
+.fee .fee_label,.highfeature_items .highfeature_label {
+    text-align: left;
+    padding-left: 6.8px;
+    margin-bottom: 10.24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.fee .fee_label::before,.highfeature_items .highfeature_label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.696px;
+    height: 10.24px;
+    background: #C14374;
+    border-radius: 8.5344px;
+}
+
+.fee .fee_content {
+    margin: 0 0 15.36px 4.27px;
+    text-align: left;
+    font-size: 11.1px;
+    color: #898989;
+}
+
+.fee .fee_tip {
+    margin-top: 12.8pc;
+    font-family: PingFangSC-Light;
+    font-size: 10.24px;
+    color: #BEBEBE;
+    letter-spacing: 0.008rem;
+    font-weight: 300;
+    text-align: left;
+    line-height: 13.65344px;
+}
+
+.van-goods-action {
+  z-index: 999;
+}
+
+.stickey_title  {
+  background: #fff;
+  width: 100%;
+  height: 37.5px;
+  padding: 0 16.96px;
+}
+
+.white-space {
+  width: 100%;
+  height: 50px;
+}
