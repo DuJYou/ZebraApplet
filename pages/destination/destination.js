@@ -15,22 +15,33 @@ Page({
     text:'更多的目的地▼'
   },
   //点击目的地进入详情页
-  onClickDestinationList(){
-    console.log(1);
-    
-    wx.switchTab({
-      url: '/pages/detail/detail',
+  onClickDestinationList(  detail = {}){
+    console.log(detail);
+    let id=detail.currentTarget.id
+    console.log(id);
+    wx.navigateTo({
+      url: `/pages/detail/detail?id=${detail.currentTarget.id}`,
       success: (result)=>{
-        
       },
       fail: ()=>{},
       complete: ()=>{}
     });
+    // wx.switchTab({
+    //   url: `/pages/detail/detail?id=${detail.currentTarget.id}`,
+    // })
+   
   },
   //点击推荐进入详情页
-  onClickTltleSite(){
+  onClickTltleSite( detail = {}){
+    console.log(1,detail);
     // console.log(1);
-    
+    wx.navigateTo({
+      url: `/pages/detail/detail?id=${detail.currentTarget.id}`,
+      success: (result)=>{
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
     //wx.switchTab({
     //   url: '',
     //   success: (result)=>{
