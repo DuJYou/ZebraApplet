@@ -213,6 +213,7 @@ swiper {
 
 .bm-cms-item {
   margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
 
 .bm-img {
