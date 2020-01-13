@@ -1,0 +1,26 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="header">
+    <text class="return" bindtap="onClickReturn">〈</text>
+    <text class="title">用户反馈</text>
+</view>
+<view class="feedbackContent">
+    <view class="list">
+        <view class="listTitle" >
+            用户反馈
+        </view>
+        <input class="inp" type="text" placeholder="请写下您的宝贵意见或建议，我们会在第一时间给予回复！"/>
+    </view>
+      <view class="list">
+        <view class="listTitle" >
+            姓名
+        </view>
+        <input class="inp" type="text" placeholder="请输入您的姓名"/>
+    </view>
+      <view class="list">
+        <view class="listTitle" >
+            手机号
+        </view>
+        <input class="inp" type="text" placeholder="请输入您的手机号"/>
+    </view>
+</view>
+<button class="but">发送</button>
