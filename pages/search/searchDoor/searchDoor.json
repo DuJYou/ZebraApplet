@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search-history":"/component/search/searchHistory/searchHistory",
+    "header-search" : "/component/search/header/header",
+    "van-popup": "../../../miniprogram_npm/vant-weapp/popup/index"
+  }
+}

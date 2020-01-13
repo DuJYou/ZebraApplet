@@ -1,0 +1,41 @@
+/* component/product/private/private.wxss */
+.privateView{
+    height: 245px;
+    margin: 0 4%;
+    background: #FFFFFF;
+    padding: 0 18px;
+    margin-bottom: 6px;
+    -webkit-box-shadow: 0 0 0.21333rem 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0.21333rem 0 rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 0.08rem 0.08rem;
+}
+.priveViewOne{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 45px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.xialaimage{
+    width: 16px;
+    height: 16px;
+}
+.priveViewFont{
+    font-size: 12.3px;
+    color:#ccc;
+}
+.priveViewplaceholderFont{
+    font-size: 12.3px;
+    color:#ccc;
+}
+.Huoqubutton{
+    height: 42px;
+    background-color: #C14374;
+    border-radius:5px;
+    color:#fff;
+    line-height:42px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+    margin-top:20px;
+}

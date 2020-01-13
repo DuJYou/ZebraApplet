@@ -1,0 +1,7 @@
+<!--component/search/page404/page404.wxml-->
+<view class="page404">
+
+        <image class="imageView" src="../../../image/zybs.png"></image>
+        <view class="FontView">没有找到该地点</view>
+        <view class="FontView">小马会尽快的添加至该地方</view>
+</view>

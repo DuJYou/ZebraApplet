@@ -1,0 +1,29 @@
+<!--component/search/searchMain/searchMain.wxml-->
+<view class="SearchTabCase">
+    <view class="SearchTabFontWrap" bindtap="clickZongHe">
+    <text class="SearchTabFont" style="color:{{zongHe==1?'#d81e06':'#333'}}">综合</text>
+        <view class="SearchTabFontImageWrap" >
+            <image wx:if="{{zongHe===0}}" class="SearchTabFontImage" src="../../../image/xhui.png" />
+            <image wx:if="{{zongHe===1}}" class="SearchTabFontImage" src="../../../image/xred.png" />
+        </view>
+    </view>
+    <view class="SearchTabFontWrap"  bindtap="clickPrice">
+    <text class="SearchTabFont" style="color:{{Price?'#d81e06':'#333'}}">价格</text>
+        <view class="SearchTabFontImageWrap">
+                <image  wx:if="{{Price===0}}" class="SearchTabFontImage" src="../../../image/shui.png" />
+                <image  wx:if="{{Price===0}}" class="SearchTabFontImage" src="../../../image/xhui.png" />
+
+                <image  wx:if="{{Price===1}}" class="SearchTabFontImage" src="../../../image/sred.png" />
+                <image  wx:if="{{Price===1}}" class="SearchTabFontImage" src="../../../image/xhui.png" />
+
+                <image  wx:if="{{Price===2}}" class="SearchTabFontImage" src="../../../image/shui.png" />
+                <image  wx:if="{{Price===2}}" class="SearchTabFontImage" src="../../../image/xred.png" />
+        </view>
+    </view>
+    <view class="SearchTabFontWrap" bindtap="clickShai">
+    <text class="SearchTabFont">筛选</text>
+     <view class="SearchTabFontImageWrap">
+                <image class="SearchTabFontImage" src="../../../image/shaihui.png" />
+        </view>
+    </view>
+</view>

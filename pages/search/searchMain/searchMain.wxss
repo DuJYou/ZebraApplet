@@ -1,0 +1,60 @@
+/* pages/search/searchMain/searchMain.wxss */
+.searchMainHeaderWarp{
+    display: flex;
+}
+.header-search{
+    flex:1;
+}
+.searchMainHeaderWarpIcon{
+    width: 50rpx;
+    height: 74rpx;
+    text-align: center;
+    line-height:74rpx;
+    margin-top:10rpx;
+}
+.searchMainTab{
+    margin-top:10px;
+}
+.searchMainWRAP{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.searchbody{
+    flex:1;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+page{
+    overflow: hidden;
+    height: 100%;
+}
+.loadingpic{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+.loadingpic image{
+    width: 80px;
+    height: 18px;
+}
+.ShaWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kuimg{
+    margin-top:20px;
+    margin-bottom: 10px;
+}
+.ku{
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-family: PingFangSC-Light;
+    font-size: 16px;
+    color: #898989;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 300;
+}

@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "requires": true,
   "lockfileVersion": 1,
   "dependencies": {
@@ -28,4 +29,9 @@
     "vant-weapp": "^1.0.0-beta.4"
   }
 >>>>>>> e0e300a9d6485b7cc4c3550f58ae261432d93c99
+=======
+  "dependencies": {
+    "vant-weapp": "^0.5.27"
+  }
+>>>>>>> origin/hy
 }

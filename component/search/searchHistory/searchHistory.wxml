@@ -1,0 +1,13 @@
+<!--component/search/hotSearch/hotSearcch.wxml-->
+<view class="searchHistoryWrap">
+    <text>搜索历史</text>
+    <mp-icon icon="delete" color="black" size="{{18}}"></mp-icon>
+    
+</view>
+<view class="searchHistoryTabWrap">
+        <view bindtap="clickKuai" class="searchHistoryTab" data-actor="日本">日本</view>
+        <view bindtap="clickKuai" class="searchHistoryTab" data-actor="法国">法国</view>
+        <view bindtap="clickKuai" class="searchHistoryTab" data-actor="澳大利亚">澳大利亚</view>
+        <view bindtap="clickKuai" class="searchHistoryTab" data-actor="新加坡">新加坡</view>
+        <view bindtap="clickKuai" class="searchHistoryTab" data-actor="威尼斯">威尼斯</view> 
+</view>

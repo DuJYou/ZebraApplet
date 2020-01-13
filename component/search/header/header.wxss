@@ -1,0 +1,31 @@
+/* component/header/header.wxss */
+.SearchHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20rpx;
+    height: 60rpx;
+    padding: 0 20rpx;
+}
+.placeholderSearchFont,.searchInput{
+    color: #333;
+    font-size: 24rpx;
+}
+.SearchHeaderWrap{
+    display: flex;
+    align-items: center;
+    border: 2rpx solid #D9D9D9;
+    height: 70rpx;
+    flex:1;
+    padding: 0 20rpx;
+}
+.searchInput{
+    width: 100%;
+    margin-left:20rpx ;
+}
+.SearchFont{
+    text-align: center;
+    line-height:60rpx;
+    font-size: 24rpx;
+    padding-left:20rpx ;
+}
