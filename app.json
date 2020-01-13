@@ -1,10 +1,24 @@
 {
+<<<<<<< HEAD
   "pages": [
     "pages/home/home",
     "pages/destination/destination",
     "pages/product/product",
     "pages/bmfind/bmfind",
     "pages/personal/personal"
+=======
+ 
+  "pages": [
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/destination/destination",
+    "pages/login/login",
+    "pages/feedback/feedback",
+    "pages/settings/settings",
+    "pages/home/home",
+    "pages/product/product",
+    "pages/bmfind/bmfind"
+>>>>>>> Duke
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

@@ -4,6 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
+<<<<<<< HEAD
 		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
@@ -18,6 +19,33 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.0",
 	"appid": "wxdc8a3df3ebb4cb87",
+=======
+		"urlCheck": false,
+		"es6": true,
+		"enhance": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"bundle": false,
+		"preloadBackgroundData": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.0",
+	"appid": "wx672c0ea3ebb4efc9",
+>>>>>>> Duke
 	"projectname": "banma",
 	"debugOptions": {
 		"hidedInDevtools": []
