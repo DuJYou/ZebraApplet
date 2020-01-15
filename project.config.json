@@ -7,10 +7,10 @@
 		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
-		"nodeModules": true,
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
@@ -21,13 +21,12 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		},
-		"preloadBackgroundData": false
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.0",
 	"appid": "wxdc8a3df3ebb4cb87",
-	"projectname": "banma",
+	"projectname": "ZebraApplet",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
