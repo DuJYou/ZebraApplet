@@ -1,4 +1,4 @@
-<scroll-view class="detail-container">
+<view class="detail-container">
   <van-toast id="van-toast" />
   <view class="product-swiper">
     <swiper indicator-active-color="#fff" class="my-swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -10,10 +10,18 @@
         </swiper-item>
       </block>
     </swiper>
+    <view class="pro_navbar">
+      <view class="pro_navbar_item {{menuFixed ?'pro_navbar_item_sticky':''}}">
+        <van-icon color="{{menuFixed?'black':'white'}}" name="arrow-left" size="20.48" bind:tap="historyBack" />
+      </view>
+      <view class="pro_navbar_item {{menuFixed ?'pro_navbar_item_sticky':''}}">
+        <van-icon color="{{menuFixed?'black':'white'}}" name="share" size="20.48" />
+      </view>
+    </view>
     <view class="product-num">产品编号：{{showData.id}}</view>
   </view>
   <view class="product-detail">
-    <view class="needsticky {{stickyTop === 0?'product-item-title-sticky':null}}">
+    <view class="needsticky {{menuFixed ?'product-item-title-sticky':''}}">
       <text class="bm-product-item-title">{{showData.title}}</text>
     </view>
     <text class="bm-product-item-subtitle">{{showData.label}}</text>
@@ -71,15 +79,15 @@
       <van-icon name="arrow-down" />
     </view>
   </view>
-  <van-tabs sticky active="{{ active }}" color="#c04374">
-    <van-tab title="产品特点">
+  <van-tabs active="{{ active }}" color="#c04374">
+    <van-tab disabled="{{showData.feature?false:true}}" title="产品特点">
       <view class="tab-item">
         <rich-text nodes="{{featureItem.content}}" wx:for="{{showData.feature}}" wx:key="index" wx:for-item="featureItem">
         </rich-text>
         <view class="white-space"></view>
       </view>
     </van-tab>
-    <van-tab title="特色体验">
+    <van-tab disabled="{{showData.high_feature?false:true}}" title="特色体验">
       <view class="tab-item highfeature">
         <view class="highfeature_items" wx:for="{{showData.high_feature}}" wx:for-item="highItem" wx:key="title">
           <view class="highfeature_label">{{highItem.title}}</view>
@@ -91,14 +99,18 @@
                 </swiper-item>
               </block>
             </swiper>
-            <van-tag plain color="#c14374" size="medium" custom-class="highfeature_tag">{{highListItem.label}}</van-tag>
+            <van-tag plain color="#c14374" size="medium" custom-class="highfeature_tag">
+              {{highListItem.label}}
+            </van-tag>
             <view class="high-feature__title">{{highListItem.title}}</view>
             <text class="high-feature__content">{{highListItem.content}}</text>
           </view>
         </view>
       </view>
     </van-tab>
-    <van-tab title="费用须知">
+    <van-tab  
+    disabled="{{showData.www_fee_contain || showData.www_fee_not_contain || showData.www_notice?false:true}}"       title="费用须知"
+    >
       <view class="tab-item fee">
         <view class="fee_label">费用包含</view>
         <view class="fee_content">
@@ -122,4 +134,4 @@
     <van-goods-action-icon icon="phone-circle-o" text="客服" bind:click="onClickIcon" />
     <van-goods-action-button color="#c04374" text="立即定制" bind:click="onClickButton" />
   </van-goods-action>
-</scroll-view>
+</view>

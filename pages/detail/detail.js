@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    stickyTop: 200,
+    menuTop: 200,
+    menuFixed: false,
     active: 0,
     fav: 0,
     showData: null,
@@ -52,11 +53,45 @@ Page({
     })
   },
 
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    
+    // 查询菜单栏距离文档顶部的距离menuTop
+    let me = this;
+    //获取tab的距离顶部高度
+    const query = wx.createSelectorQuery();
+    query.select('.needsticky').boundingClientRect(function(res) {
+      // console.log(res.top)
+      me.data.menuTop = res.top
+    }).exec();
+  },
+
+  scroll(el) {
+    if (this.data.menuFixed === (el.scrollTop >= this.data.menuTop)) return;
+    //结果： 减少函数的触发频率，每隔多少ms就执行一次函数
+    this.setData({
+      menuFixed: (el.scrollTop > this.data.menuTop)
+    })
+  },
+
+  onPageScroll: function(event) {
+    this.throttle(this.scroll(event),500)
+  },
+
+  //函数节流
+  throttle(fn, interval) {
+    var enterTime = 0; //触发的时间
+    var gapTime = interval || 300; //间隔时间，如果interval不传，则默认300ms
+    return function() {
+      var context = this;
+      var backTime = new Date(); //第一次函数return即触发的时间
+      if (backTime - enterTime > gapTime) {
+        fn.call(context, arguments);
+        enterTime = backTime; //赋值给第一次触发的时间，这样就保存了第二次触发的时间
+      }
+    };
   },
 
   /**
@@ -125,11 +160,9 @@ Page({
     }
   },
 
-  handleScroll({
-    scrollTop = 0,
-    isFixed = true
-  }) {
-    if (scrollTop && isFixeds)
-      console.log(this)
-  }
+  historyBack() {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
 })

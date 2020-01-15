@@ -10,10 +10,7 @@
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
-<<<<<<< HEAD
-=======
 		"nodeModules": true,
->>>>>>> quting
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
@@ -24,14 +21,6 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-<<<<<<< HEAD
-		}
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.10.0",
-	"appid": "wx8f39b069b16061c7",
-	"projectname": "miniprogram-1",
-=======
 		},
 		"preloadBackgroundData": false
 	},
@@ -39,7 +28,6 @@
 	"libVersion": "2.10.0",
 	"appid": "wxdc8a3df3ebb4cb87",
 	"projectname": "banma",
->>>>>>> quting
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
