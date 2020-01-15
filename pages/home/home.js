@@ -104,6 +104,26 @@ Page({
       swiperCurrent: e.detail.current   //获取当前轮播图片的下标
     })
   },
+  onClickTltleSite( detail = {}){
+    console.log(1,detail.currentTarget.id);
+    // console.log(1);
+    // let product_id=detail.currentTarget.id
+    wx.navigateTo({
+      url: `/pages/detail/detail?product_id=${detail.currentTarget.id}`,
+      success: (result)=>{
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+    //wx.switchTab({
+    //   url: '',
+    //   success: (result)=>{
+        
+    //   },
+    //   fail: ()=>{},
+    //   complete: ()=>{}
+    // });
+  },
   handleFOrmattingPrice(){
     let list=listData.ajaxData.data.list
     let child=childData.childData.data.list

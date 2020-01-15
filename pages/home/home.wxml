@@ -62,7 +62,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index<=3 }}">
-										<swiper-item id="{{item.id}}">
+										<swiper-item id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image class="test-img" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -97,7 +97,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>3&&index<6}}">
-										<swiper-item id="{{item.id}}">
+										<swiper-item id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image class="test-img" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -131,7 +131,7 @@
 						<view class="bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>=6&&index<10}}">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class ="bm-product-item-title">{{item.title}}</view>
@@ -164,7 +164,7 @@
 						<view class="bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>=10&&index<14}}">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -198,7 +198,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>=14&&index<18}}">
-										<swiper-item id="{{item.id}}">
+										<swiper-item id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image class="test-img" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -233,7 +233,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>=18&&index<23}}">
-										<swiper-item id="{{item.id}}">
+										<swiper-item id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image class="test-img" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -267,7 +267,7 @@
 						<view class="bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{listdata}}" wx:key="listdata" wx:if="{{index>=23&&index<27}}">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -306,7 +306,7 @@
 						<view class="home2-item bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{childdata}}" wx:key="childdata" wx:if="{{index>=0&&index<4}}">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -340,7 +340,7 @@
 						<view class="home2-item bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{childdata}}" wx:key="childdata" wx:if="{{index>=4&&index<8}}">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -374,7 +374,7 @@
 						<view class="home2-item bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{childdata}}" wx:key="childdata" wx:if="{{index>=8&&index<12}}">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -461,7 +461,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index<3}}">
-										<swiper-item id="{{item.id}}">
+										<swiper-item id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image style="height:400rpx;width:100%" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -498,7 +498,7 @@
 						<view class="home2-item bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index>=3&&index<6}}">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -535,7 +535,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index>=6&&index<8}}">
-										<swiper-item id="{{item.id}}">
+										<swiper-item id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image style="height:400rpx;width:100%" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -573,7 +573,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index>=8&&index<11}}">
-										<swiper-item id="{{item.id}}">
+										<swiper-item id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image style="height:400rpx;width:100%" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -612,7 +612,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index>=11&&index<12}}">
-										<swiper-item id="{{item.id}}">
+										<swiper-item id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image style="height:400rpx;width:100%" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -645,7 +645,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{tripdata}}" wx:key="tripdata" wx:if="{{index>=12}}">
-										<swiper-item  id="{{item.id}}">
+										<swiper-item  id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image style="height:400rpx;width:100%" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -851,7 +851,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{mengdata}}" wx:key="mengdata" wx:if="{{index<=3 }}">
-										<swiper-item  id="{{item.id}}">
+										<swiper-item  id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image class="test-img" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -884,7 +884,7 @@
 							<view class='test'>
 								<swiper display-multiple-items='1' next-margin='40rpx'>
 									<block wx:for="{{mengdata}}" wx:key="mengdata" wx:if="{{index>3&&index<11 }}">
-										<swiper-item  id="{{item.id}}">
+										<swiper-item  id="{{item.id}}" bindtap="onClickTltleSite">
 											<view class='box'>
 												<image style="width:100%;height:400rpx" src='{{item.img}}'></image>
 												<view class="bm-product-item-info">
@@ -970,7 +970,7 @@
 						<view class="bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{mengdata}}" wx:key="mengdata" wx:if="{{index>=11&&index<17}}">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -1001,7 +1001,7 @@
 						<view class="bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{mengdata}}" wx:key="mengdata" wx:if="{{index>=17&&index<21}}">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin"  id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin"  id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -1033,7 +1033,7 @@
 						<view class="bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{oudata}}" wx:key="oudata">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin"  id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin"  id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -1065,7 +1065,7 @@
 						<view class="bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{feidata}}" wx:key="feidata">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -1097,7 +1097,7 @@
 						<view class="bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{meidata}}" wx:key="meidata">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
@@ -1129,7 +1129,7 @@
 						<view class="bm-cms-item">
 							<view class="bm-product-two">
 								<block wx:for="{{zuguodata}}" wx:key="zuguodata">
-									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}">
+									<view class="bm-product-item bm-product-two-item bm-product-two-item__margin" id="{{item.id}}" bindtap="onClickTltleSite">
 										<image class="bm-item-img" src="{{item.img}}" />
 										<view class="bm-product-item-info">
 											<view class="bm-product-item-title">{{item.title}}</view>
